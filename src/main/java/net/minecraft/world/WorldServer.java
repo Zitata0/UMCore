@@ -170,7 +170,7 @@ public class WorldServer extends World
 
 		if (this.getGameRules().getGameRuleBooleanValue("doMobSpawning"))
 		{
-			if(isServer && mobSpawner != null)
+			if(isServer && config.mobSpawn.spawnEngine == WorldConfig.MobSpawn.MobSpawnEngine.NEW && mobSpawner != null)
 				mobSpawner.performSpawn(spawnHostileMobs, spawnPeacefulMobs, worldInfo.getWorldTotalTime());
 			else
 				this.animalSpawner.findChunksForSpawning(this, this.spawnHostileMobs, this.spawnPeacefulMobs, this.worldInfo.getWorldTotalTime() % 400L == 0L);

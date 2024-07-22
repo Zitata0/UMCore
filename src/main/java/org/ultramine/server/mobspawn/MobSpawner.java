@@ -114,8 +114,9 @@ public abstract class MobSpawner
 	 */
 	protected boolean trySpawnGroupAt(int x, int y, int z, int groupSize)
 	{
-		if(!isApplicableForSpawn(type, x, y, z))
+		if(!isApplicableForSpawn(type, x, y, z)){
 			return false;
+		}
 		SpawnListEntry spawn = world.spawnRandomCreature(type, x, y, z);
 		if(spawn == null)
 			return true;

@@ -23,7 +23,8 @@ public class MobSpawnerMonsters extends MobSpawner
 	@Override
 	public void configure(WorldConfig config)
 	{
-		setConstants(set = config.mobSpawn.newEngineSettings.monsters);
+		set = config.mobSpawn.newEngineSettings.monsters;
+		setConstants(config.mobSpawn.newEngineSettings.monsters);
 	}
 
 	@Override
@@ -70,9 +71,10 @@ public class MobSpawnerMonsters extends MobSpawner
 		
 		for(int i = 0; i < 12; i++)
 		{
-			if(trySpawnGroupAt(x, y, z, 1))
+			if(trySpawnGroupAt(x, y, z, 1)){
 				break;
-			
+			}
+
 			if(op == 0) y = world.rand.nextInt(topf - 2);
 			else if(op == 1) break;
 			else if(op == 2) y = world.rand.nextInt(topf + 1);

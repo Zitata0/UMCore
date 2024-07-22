@@ -56,7 +56,7 @@ public class ConfigUtil
 			try
 			{
 				Object ret = cls.newInstance();
-				for(Field f : cls.getDeclaredFields())
+				for(Field f : cls.getFields())
 				{
 					f.setAccessible(true);
 					f.set(ret, deepClone(f.get(obj)));
