@@ -1,0 +1,71 @@
+listen:
+    minecraft:
+        serverIP: ''
+        port: 25565
+    query:
+        enabled: false
+        port: 25565
+    rcon:
+        enabled: false
+        port: 25565
+        password: ''
+        whitelist: null
+settings:
+    authorization:
+        onlineMode: true
+    player:
+        playerIdleTimeout: 0
+        gamemode: 0
+        maxPlayers: 20
+        forceGamemode: false
+        whiteList: false
+    other:
+        snooperEnabled: true
+        hardcore: false
+        resourcePack: ''
+        enableCommandBlock: false
+        splitWorldDirs: true
+        recipeCacheEnabled: true
+    spawnLocations:
+        firstSpawn: spawn
+        deathSpawn: spawn
+        respawnOnBed: true
+    teleportation:
+        cooldown: 60
+        delay: 5
+        interWorldHome: true
+        interWorldWarp: true
+    messages:
+        announcePlayerAchievements: true
+        motd: A Minecraft Server
+    watchdogThread:
+        timeout: 120
+        restart: true
+    inSQLServerStorage:
+        enabled: false
+        database: global
+        tablePrefix: mc_
+    security:
+        allowFlight: false
+        checkBreakSpeed: true
+tools:
+    autobroadcast:
+        enabled: false
+        intervalSeconds: 600
+        messages: []
+        showAllMessages: false
+    autoDebugInfo:
+        enabled: false
+        intervalSeconds: 600
+    autobackup:
+        enabled: false
+        interval: 60
+        maxBackups: 10
+        maxDirSize: 50000
+        worlds: null
+        notifyPlayers: true
+    economy:
+        startBalance: 30.0
+databases: {}
+vanilla:
+    unresolved: {}

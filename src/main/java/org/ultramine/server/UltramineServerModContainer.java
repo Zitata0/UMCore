@@ -10,9 +10,6 @@ import net.minecraftforge.common.MinecraftForge;
 
 import org.ultramine.commands.CommandRegistry;
 import org.ultramine.commands.basic.FastWarpCommand;
-import org.ultramine.commands.basic.GenWorldCommand;
-import org.ultramine.commands.basic.TechCommands;
-import org.ultramine.commands.basic.VanillaCommands;
 import org.ultramine.commands.syntax.DefaultCompleters;
 import org.ultramine.core.economy.service.DefaultHoldingsProvider;
 import org.ultramine.core.economy.service.Economy;
@@ -184,10 +181,6 @@ public class UltramineServerModContainer extends DummyModContainer
 		try
 		{
 			e.getServer().getConfigurationManager().getDataLoader().registerPlayerDataExt(PlayerCoreData.class, "core");
-			e.registerArgumentHandlers(DefaultCompleters.class);
-			e.registerCommands(VanillaCommands.class);
-			e.registerCommands(TechCommands.class);
-			e.registerCommands(GenWorldCommand.class);
 
 			if(e.getSide().isServer())
 			{
@@ -207,11 +200,8 @@ public class UltramineServerModContainer extends DummyModContainer
 		try
 		{
 			ServerDataLoader loader = MinecraftServer.getServer().getConfigurationManager().getDataLoader();
-			CommandRegistry reg = ((CommandHandler)MinecraftServer.getServer().getCommandManager()).getRegistry();
 			loader.loadCache();
 			loader.addDefaultWarps();
-			for(String name : loader.getFastWarps())
-				reg.registerCommand(new FastWarpCommand(name));
 			if(e.getSide().isServer())
 			{
 				getRecipeCache().setEnabled(ConfigurationHandler.getServerConfig().settings.other.recipeCacheEnabled);

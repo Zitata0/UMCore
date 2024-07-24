@@ -1,9 +1,13 @@
 package net.minecraft.command;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
+import java.util.Map.Entry;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
@@ -12,14 +16,12 @@ import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CommandEvent;
-import org.ultramine.commands.CommandRegistry;
 
 public class CommandHandler implements ICommandManager
 {
 	private static final Logger logger = LogManager.getLogger();
-	private final CommandRegistry registry = new CommandRegistry();
-	private final Map commandMap = registry.getCommandMap();
-	private final Set commandSet = registry.getCommandSet();
+	private final Map commandMap = new HashMap();
+	private final Set commandSet = new HashSet();
 	private static final String __OBFID = "CL_00001765";
 
 	public int executeCommand(ICommandSender par1ICommandSender, String par2Str)
@@ -34,7 +36,7 @@ public class CommandHandler implements ICommandManager
 		String[] astring = par2Str.split(" ");
 		String s1 = astring[0];
 		astring = dropFirstString(astring);
-		ICommand icommand = registry.get(s1);
+		ICommand icommand = (ICommand)this.commandMap.get(s1);
 		int i = this.getUsernameIndex(icommand, astring);
 		int j = 0;
 		ChatComponentTranslation chatcomponenttranslation;
@@ -123,12 +125,27 @@ public class CommandHandler implements ICommandManager
 
 	public ICommand registerCommand(ICommand par1ICommand)
 	{
-		return registry.registerVanillaCommand(par1ICommand);
-	}
+		List list = par1ICommand.getCommandAliases();
+		this.commandMap.put(par1ICommand.getCommandName(), par1ICommand);
+		this.commandSet.add(par1ICommand);
 
-	public CommandRegistry getRegistry()
-	{
-		return registry;
+		if (list != null)
+		{
+			Iterator iterator = list.iterator();
+
+			while (iterator.hasNext())
+			{
+				String s = (String)iterator.next();
+				ICommand icommand1 = (ICommand)this.commandMap.get(s);
+
+				if (icommand1 == null || !icommand1.getCommandName().equals(s))
+				{
+					this.commandMap.put(s, par1ICommand);
+				}
+			}
+		}
+
+		return par1ICommand;
 	}
 
 	private static String[] dropFirstString(String[] par0ArrayOfStr)
@@ -150,13 +167,26 @@ public class CommandHandler implements ICommandManager
 
 		if (astring.length == 1)
 		{
-			return registry.filterPossibleCommandsNames(par1ICommandSender, s1);
+			ArrayList arraylist = new ArrayList();
+			Iterator iterator = this.commandMap.entrySet().iterator();
+
+			while (iterator.hasNext())
+			{
+				Entry entry = (Entry)iterator.next();
+
+				if (CommandBase.doesStringStartWith(s1, (String)entry.getKey()) && ((ICommand)entry.getValue()).canCommandSenderUseCommand(par1ICommandSender))
+				{
+					arraylist.add(entry.getKey());
+				}
+			}
+
+			return arraylist;
 		}
 		else
 		{
 			if (astring.length > 1)
 			{
-				ICommand icommand = registry.get(s1);
+				ICommand icommand = (ICommand)this.commandMap.get(s1);
 
 				if (icommand != null)
 				{
@@ -170,12 +200,25 @@ public class CommandHandler implements ICommandManager
 
 	public List getPossibleCommands(ICommandSender par1ICommandSender)
 	{
-		return registry.getPossibleCommands(par1ICommandSender);
+		ArrayList arraylist = new ArrayList();
+		Iterator iterator = this.commandSet.iterator();
+
+		while (iterator.hasNext())
+		{
+			ICommand icommand = (ICommand)iterator.next();
+
+			if (icommand.canCommandSenderUseCommand(par1ICommandSender))
+			{
+				arraylist.add(icommand);
+			}
+		}
+
+		return arraylist;
 	}
 
 	public Map getCommands()
 	{
-		return registry.getCommandMap();
+		return this.commandMap;
 	}
 
 	private int getUsernameIndex(ICommand par1ICommand, String[] par2ArrayOfStr)

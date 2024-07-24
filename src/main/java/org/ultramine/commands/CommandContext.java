@@ -136,30 +136,6 @@ public class CommandContext
 		CommandBase.func_152374_a(sender, null, 1, messageKey, messageArgs);
 	}
 
-	public void checkSenderPermission(String permission)
-	{
-		checkSenderPermission(permission, "command.generic.permission");
-	}
-	
-	public void checkSenderPermission(String permission, String msg)
-	{
-		if (!senderIsServer() && !perms.has(sender, permission))
-			throw new CommandException(msg);
-	}
-
-	public void checkSenderPermissionInWorld(String world, String permission)
-	{
-		if (!senderIsServer() && !perms.has(world, sender.getCommandSenderName(), permission))
-			throw new CommandException("command.generic.permission");
-	}
-	
-	public void checkPermissionIfArg(String arg, String permission, String msg)
-	{
-		if(contains(arg))
-			checkSenderPermission(permission, msg);
-	}
-
-
 	/* thread-safe */
 	public void sendMessage(IChatComponent comp)
 	{

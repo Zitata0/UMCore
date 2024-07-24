@@ -177,11 +177,6 @@ public class CommandRegistry
 		return nameInfos.computeIfAbsent(name, NameInfo::new).add(command);
 	}
 
-	private void removeName(String name, IExtendedCommand command)
-	{
-		nameInfos.computeIfAbsent(name, NameInfo::new).remove(command);
-	}
-
 	public void registerCommand(IExtendedCommand command)
 	{
 		registeredCommands.add(command);
@@ -189,13 +184,6 @@ public class CommandRegistry
 		addName(command.getGroup() + ":" + command.getCommandName(), command);
 		for(String name : getAllNames(command))
 			addName(name, command);
-	}
-
-	public void unregisterCommand(IExtendedCommand command)
-	{
-		if(registeredCommands.remove(command))
-			for(String name : getAllNames(command))
-				removeName(name, command);
 	}
 
 	public IExtendedCommand registerVanillaCommand(ICommand command)

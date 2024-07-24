@@ -1,0 +1,870 @@
+[00:32:06] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.FMLServerTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLServerTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLServerTweaker
+[00:32:06] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[00:32:06] [main/INFO] [FML/]: Forge Mod Loader version 7.99.39.1 for Minecraft 1.7.10 loading
+[00:32:06] [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_291, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_291\jre
+[00:32:06] [main/DEBUG] [FML/]: Java classpath at launch is F:\MinecraftModProject\UMCore\build\classes\java\main;F:\MinecraftModProject\UMCore\build\resources\main;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.3.5\807ae355ee63583becd7ea60e76aab1532bb42e\realms-1.3.5.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.11\9c0592c6e1e9ea296a70948081bd4cc84dda1289\launchwrapper-1.11.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\5.16\1f55f009c61637c10c0acfb8b5ffc600f30044b4\twitch-5.16.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-xml_2.11\1.0.2\7a80ec00aec122fba7cd4e0d4cdd87ff7e4cb6d0\scala-xml_2.11-1.0.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.5\6065cc95c661255349c1d0756657be17c29a4fd3\jopt-simple-4.5.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-dbcp2\2.1.1\c4f4a76171671ccf293be8995a498eab7fa8ed24\commons-dbcp2-2.1.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.3.1\a0ae4f51da409fa0c20fa0ca59e6bbc9413ae71d\vecmath-1.3.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.10.Final\9e50bd52ffe257a0e2cd8d971688d6ce7d174325\netty-all-4.0.10.Final.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.16\ef1582b11fd0943d069cdcb72e99008ac209a283\authlib-1.5.16.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.16\d64fb662c9e42789149f5078a62a22edda786c6a\snakeyaml-1.16.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.lmax\disruptor\3.2.1\db375f499e32c3f06549e9addf8b1647123d6426\disruptor-3.2.1.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.openhft\koloboke-impl-jdk8\0.6.8\b367ae752f987f0eb3178c4340ec2dad74209230\koloboke-impl-jdk8-0.6.8.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.openhft\koloboke-api-jdk8\0.6.8\461925316a141df2197d0e5c3f6f9942267fa4ea\koloboke-api-jdk8-0.6.8.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\jline\jline\2.13\2d9530d0a25daffaffda7c35037b046b627bb171\jline-2.13.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\5.1.31\95baa522c5ae4dbff61e8ebd1b2578665d6853a0\mysql-connector-java-5.1.31.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\7c6affe439099806a4f552da14c42f9d643d8b23\twitch-platform-5.16-natives-windows-32.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\39d0c3d363735b4785598e0e7fbf8297c706a9f9\twitch-platform-5.16-natives-windows-64.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\62503ee712766cf77f97252e5902786fd834b8c5\twitch-platform-5.16-natives-osx.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-pool2\2.4.2\e5f4f28f19d57716fbc3989d7a357ebf1e454fea\commons-pool2-2.4.2.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar;C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar
+[00:32:06] [main/DEBUG] [FML/]: Java library path at launch is C:\Program Files\Java\jdk1.8.0_291\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\WireGuard\;C:\Users\Admin\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python312\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\.dotnet\tools;D:\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\PyCharm 2021.3.1\bin;;C:\MinGW\bin;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;.
+[00:32:06] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[00:32:06] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[00:32:06] [main/DEBUG] [FML/]: Added access transformer class cpw.mods.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[00:32:06] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[00:32:06] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[00:32:06] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.transformers.ForgeAccessTransformer to enqueued access transformers
+[00:32:06] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[00:32:06] [main/DEBUG] [FML/]: Instantiating coremod class UltraminePlugin
+[00:32:06] [main/DEBUG] [FML/]: Enqueued coremod UltraminePlugin
+[00:32:06] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[00:32:06] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to F:\MinecraftModProject\UMCore\runServer\.
+[00:32:06] [main/DEBUG] [FML/]: Discovering coremods
+[00:32:06] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[00:32:06] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[00:32:06] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin} class transformers
+[00:32:06] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.MarkerTransformer
+[00:32:06] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.SideTransformer
+[00:32:06] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.EventSubscriptionTransformer
+[00:32:06] [main/DEBUG] [FML/]: Injection complete
+[00:32:06] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin}
+[00:32:06] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[00:32:06] [main/ERROR] [FML/]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[00:32:07] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[00:32:07] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[00:32:07] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[00:32:07] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.classloading.FluidIdTransformer
+[00:32:07] [main/DEBUG] [FML/]: Injection complete
+[00:32:07] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[00:32:07] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[00:32:07] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[00:32:07] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[00:32:07] [main/DEBUG] [FML/]: Loaded 57 rules from AccessTransformer config file fml_at.cfg
+[00:32:07] [main/DEBUG] [FML/]: Loaded 89 rules from AccessTransformer config file forge_at.cfg
+[00:32:07] [main/DEBUG] [FML/]: Validating minecraft
+[00:32:08] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[00:32:08] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[00:32:08] [main/DEBUG] [FML/]: Injecting coremod UltraminePlugin {org.ultramine.server.UltraminePlugin} class transformers
+[00:32:08] [main/TRACE] [FML/]: Registering transformer org.ultramine.server.asm.transformers.UMTransformerCollection
+[00:32:08] [main/DEBUG] [FML/]: Injection complete
+[00:32:08] [main/DEBUG] [FML/]: Running coremod plugin for UltraminePlugin {org.ultramine.server.UltraminePlugin}
+[00:32:08] [main/DEBUG] [FML/]: Running coremod plugin UltraminePlugin
+[00:32:08] [main/DEBUG] [FML/]: Coremod plugin class UltraminePlugin run successfully
+[00:32:08] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[00:32:08] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.player.EntityPlayer.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan with INVOKESTATIC TrigMath.atan
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityLivingBase.attackEntityFrom(Lnet/minecraft/util/DamageSource;F)Z: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityLivingBase.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.entity.Entity.writeToNBT(Lnet/minecraft/nbt/NBTTagCompound;)V: Replacing INVOKEVIRTUAL java/lang/Throwable.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.entity.Entity.readFromNBT(Lnet/minecraft/nbt/NBTTagCompound;)V: Replacing INVOKEVIRTUAL java/lang/Throwable.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:08] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.server.MinecraftServer}
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.tileentity.TileEntity.createAndLoadEntity(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/tileentity/TileEntity;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityCreature.updateEntityActionState()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityCreature.updateEntityActionState()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityLiving.faceEntity(Lnet/minecraft/entity/Entity;FF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.EntityLiving.faceEntity(Lnet/minecraft/entity/Entity;FF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.tileentity.TileEntityEnchantmentTable.updateEntity()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.boss.EntityWither.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.boss.EntityWither.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.boss.EntityWither.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.<init>(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;FF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.<init>(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;FF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.setThrowableHeading(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.setThrowableHeading(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityArrow.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityMinecart.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.passive.EntityAnimal.attackEntity(Lnet/minecraft/entity/Entity;F)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityThrowable.setThrowableHeading(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityThrowable.setThrowableHeading(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityThrowable.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityThrowable.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityBoat.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFishHook.func_146035_c(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFishHook.func_146035_c(DDDFF)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFishHook.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFishHook.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityEnderEye.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityEnderEye.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityEnderEye.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityFireworkRocket.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:08] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.item.EntityFireworkRocket.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.entity.EntityList.createEntityByName(Ljava/lang/String;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.entity.EntityList.createEntityFromNBT(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.entity.EntityList.createEntityByID(ILnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFireball.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.projectile.EntityFireball.onUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.monster.EntityGhast.updateEntityActionState()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.monster.EntityGhast.updateEntityActionState()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.monster.EntityBlaze.attackEntity(Lnet/minecraft/entity/Entity;F)V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.boss.EntityDragon.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.passive.EntityBat.updateAITasks()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.passive.EntitySquid.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.passive.EntitySquid.onLivingUpdate()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:09] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method cpw.mods.fml.common.eventhandler.EventBus.register(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/reflect/Method;Lcpw/mods/fml/common/ModContainer;)V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [main/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.AnvilSaveConverter.convertChunks(Ljava/io/File;Ljava/io/File;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting minecraft server version 1.7.10
+[00:32:10] [Server thread/INFO] [MinecraftForge/]: Attempting early MinecraftForge initialization
+[00:32:10] [Server thread/INFO] [FML/]: MinecraftForge v10.13.4.1614 Initialized
+[00:32:10] [Server thread/INFO] [FML/]: Replaced 183 ore recipies
+[00:32:10] [Server thread/INFO] [MinecraftForge/]: Completed early MinecraftForge initialization
+[00:32:10] [Server thread/DEBUG] [FML/]: File F:\MinecraftModProject\UMCore\runServer\config\injectedDependencies.json not found. No dependencies injected
+[00:32:10] [Server thread/DEBUG] [FML/]: Building injected Mod Containers [cpw.mods.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer, org.ultramine.server.UltramineServerModContainer]
+[00:32:10] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraftforge.common.config.Configuration.<init>(Ljava/io/File;Ljava/lang/String;)V: Replacing INVOKEVIRTUAL java/lang/Throwable.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraftforge.common.config.Configuration.load()V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraftforge.common.config.Configuration.save()V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraftforge.common.config.Configuration.getFloat(Ljava/lang/String;Ljava/lang/String;FFFLjava/lang/String;Ljava/lang/String;)F: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:10] [Server thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related directory at F:\MinecraftModProject\UMCore\build\classes\java\main, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related directory at F:\MinecraftModProject\UMCore\build\resources\main, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.3.5\807ae355ee63583becd7ea60e76aab1532bb42e\realms-1.3.5.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.11\9c0592c6e1e9ea296a70948081bd4cc84dda1289\launchwrapper-1.11.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\5.16\1f55f009c61637c10c0acfb8b5ffc600f30044b4\twitch-5.16.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-xml_2.11\1.0.2\7a80ec00aec122fba7cd4e0d4cdd87ff7e4cb6d0\scala-xml_2.11-1.0.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.5\6065cc95c661255349c1d0756657be17c29a4fd3\jopt-simple-4.5.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-dbcp2\2.1.1\c4f4a76171671ccf293be8995a498eab7fa8ed24\commons-dbcp2-2.1.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.3.1\a0ae4f51da409fa0c20fa0ca59e6bbc9413ae71d\vecmath-1.3.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.10.Final\9e50bd52ffe257a0e2cd8d971688d6ce7d174325\netty-all-4.0.10.Final.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.16\ef1582b11fd0943d069cdcb72e99008ac209a283\authlib-1.5.16.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.16\d64fb662c9e42789149f5078a62a22edda786c6a\snakeyaml-1.16.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\com.lmax\disruptor\3.2.1\db375f499e32c3f06549e9addf8b1647123d6426\disruptor-3.2.1.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.openhft\koloboke-impl-jdk8\0.6.8\b367ae752f987f0eb3178c4340ec2dad74209230\koloboke-impl-jdk8-0.6.8.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.openhft\koloboke-api-jdk8\0.6.8\461925316a141df2197d0e5c3f6f9942267fa4ea\koloboke-api-jdk8-0.6.8.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\jline\jline\2.13\2d9530d0a25daffaffda7c35037b046b627bb171\jline-2.13.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\5.1.31\95baa522c5ae4dbff61e8ebd1b2578665d6853a0\mysql-connector-java-5.1.31.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\7c6affe439099806a4f552da14c42f9d643d8b23\twitch-platform-5.16-natives-windows-32.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\39d0c3d363735b4785598e0e7fbf8297c706a9f9\twitch-platform-5.16-natives-windows-64.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\62503ee712766cf77f97252e5902786fd834b8c5\twitch-platform-5.16-natives-osx.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-pool2\2.4.2\e5f4f28f19d57716fbc3989d7a357ebf1e454fea\commons-pool2-2.4.2.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Admin\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar, examining for mod candidates
+[00:32:10] [Server thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[00:32:10] [Server thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[00:32:10] [Server thread/INFO] [FML/]: Searching F:\MinecraftModProject\UMCore\runServer\mods for mods
+[00:32:10] [Server thread/DEBUG] [FML/]: Ignoring unknown file UM-Permissions-1.7.10-0.2-server.jars in mods directory
+[00:32:10] [Server thread/DEBUG] [FML/]: Examining directory main for potential mods
+[00:32:10] [Server thread/DEBUG] [FML/]: No mcmod.info file found in directory main
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.client
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.client.config
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.client.event
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.client.registry
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.asm
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.asm.transformers
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.asm.transformers.deobf
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.discovery
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.discovery.asm
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.event
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.eventhandler
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.functions
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.gameevent
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.launcher
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.network
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.network.handshake
+[00:32:10] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.network.internal
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.network.simpleimpl
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.patcher
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.registry
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.toposort
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.common.versioning
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.relauncher
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.repackage
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.repackage.com
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.repackage.com.nothome
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.repackage.com.nothome.delta
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package cpw.mods.fml.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.block
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.block.material
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.audio
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.entity
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.gui
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.gui.achievement
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.gui.inventory
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.gui.stream
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.main
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.model
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.multiplayer
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.network
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.particle
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.renderer
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.renderer.culling
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.renderer.entity
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.renderer.texture
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.renderer.tileentity
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.resources
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.resources.data
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.settings
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.shader
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.stream
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.client.util
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.command
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.command.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.crash
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.creativetab
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.dispenser
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.enchantment
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.ai
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.ai.attributes
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.boss
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.effect
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.item
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.monster
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.passive
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.player
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.entity.projectile
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.event
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.init
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.inventory
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.item
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.item.crafting
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.nbt
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.handshake
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.handshake.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.login
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.login.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.login.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.play
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.play.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.play.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.rcon
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.status
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.status.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.network.status.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.pathfinding
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.potion
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.profiler
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.realms
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.scoreboard
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server.dedicated
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server.gui
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server.integrated
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server.management
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.server.network
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.src
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.stats
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.tileentity
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.util
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.village
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.biome
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.chunk
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.chunk.storage
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.demo
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.gen
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.gen.feature
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.gen.layer
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.gen.structure
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraft.world.storage
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.classloading
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.event
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.event.sound
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.gui
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.model
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.model.obj
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.client.model.techne
+[00:32:11] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.common
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.common.chunkio
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.common.config
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.common.network
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.common.util
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.brewing
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.entity
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.entity.item
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.entity.living
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.entity.minecart
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.entity.player
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.terraingen
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.event.world
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.fluids
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.oredict
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.server
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.server.command
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package net.minecraftforge.transformers
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.commands
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.commands.basic
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.commands.syntax
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.economy
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.economy.account
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.economy.exception
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.economy.holdings
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.economy.service
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.permissions
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.service
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.core.util
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.scheduler
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.scheduler.pattern
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.asm
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.asm.transformers
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.bootstrap
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.bootstrap.log4j
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.chunk
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.chunk.alloc
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.chunk.alloc.unsafe
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.data
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.data.player
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.economy
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.event
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.internal
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.mobspawn
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.service
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.tools
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.util
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.world
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.world.imprt
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.server.world.load
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining directory main for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: No mcmod.info file found in directory main
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.fml
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.fml.lang
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.fml.textures
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.fml.textures.gui
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.forge
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.forge.lang
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.font
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.lang
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.shaders
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.shaders.post
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.shaders.program
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.texts
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.blocks
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.colormap
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.effect
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.cat
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.chest
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.cow
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.creeper
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.endercrystal
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.enderdragon
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.enderman
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.ghast
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.horse
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.horse.armor
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.pig
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.sheep
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.skeleton
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.slime
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.spider
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.villager
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.wither
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.wolf
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.entity.zombie
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.environment
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.font
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui.achievement
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui.container
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui.container.creative_inventory
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui.title
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.gui.title.background
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.items
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.map
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.misc
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.models
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.models.armor
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.painting
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.minecraft.textures.particle
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.ultramine
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package assets.ultramine.lang
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine
+[00:32:12] [Server thread/TRACE] [FML/]: Recursing into package org.ultramine.defaults
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file realms-1.3.5.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container realms-1.3.5.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file codecjorbis-20101023.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container codecjorbis-20101023.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file codecwav-20101023.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container codecwav-20101023.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file libraryjavasound-20101123.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file librarylwjglopenal-20100824.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container librarylwjglopenal-20100824.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file soundsystem-20120107.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container soundsystem-20120107.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file lwjgl_util-2.9.1.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container lwjgl_util-2.9.1.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file launchwrapper-1.11.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container launchwrapper-1.11.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file lwjgl-2.9.1.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container lwjgl-2.9.1.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file jinput-2.0.5.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container jinput-2.0.5.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file jutils-1.0.0.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container jutils-1.0.0.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file twitch-5.16.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container twitch-5.16.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file jsr305-1.3.9.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container jsr305-1.3.9.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file asm-debug-all-5.0.3.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container asm-debug-all-5.0.3.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file akka-actor_2.11-2.3.3.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container akka-actor_2.11-2.3.3.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file config-1.2.1.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container config-1.2.1.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file scala-actors-migration_2.11-1.1.0.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container scala-actors-migration_2.11-1.1.0.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file scala-continuations-plugin_2.11.1-1.0.2.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container scala-continuations-plugin_2.11.1-1.0.2.jar appears to be missing an mcmod.info file
+[00:32:12] [Server thread/DEBUG] [FML/]: Examining file scala-compiler-2.11.1.jar for potential mods
+[00:32:12] [Server thread/DEBUG] [FML/]: The mod container scala-compiler-2.11.1.jar appears to be missing an mcmod.info file
+[00:32:13] [Server thread/DEBUG] [FML/]: Examining file scala-continuations-library_2.11-1.0.2.jar for potential mods
+[00:32:13] [Server thread/DEBUG] [FML/]: The mod container scala-continuations-library_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[00:32:13] [Server thread/DEBUG] [FML/]: Examining file scala-reflect-2.11.1.jar for potential mods
+[00:32:13] [Server thread/DEBUG] [FML/]: The mod container scala-reflect-2.11.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-actors-2.11.0.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-actors-2.11.0.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-xml_2.11-1.0.2.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-xml_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-parser-combinators_2.11-1.0.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-parser-combinators_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-library-2.11.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-library-2.11.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-parser-combinators_2.11-1.0.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-parser-combinators_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-swing_2.11-1.0.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-swing_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file scala-xml_2.11-1.0.2.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container scala-xml_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file jopt-simple-4.5.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container jopt-simple-4.5.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file lzma-0.0.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container lzma-0.0.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file commons-compress-1.8.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container commons-compress-1.8.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file httpclient-4.3.3.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container httpclient-4.3.3.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file commons-dbcp2-2.1.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container commons-dbcp2-2.1.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file commons-logging-1.2.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container commons-logging-1.2.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file httpcore-4.3.2.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container httpcore-4.3.2.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file vecmath-1.3.1.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container vecmath-1.3.1.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file trove4j-3.0.3.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container trove4j-3.0.3.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file icu4j-core-mojang-51.2.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container icu4j-core-mojang-51.2.jar appears to be missing an mcmod.info file
+[00:32:14] [Server thread/DEBUG] [FML/]: Examining file netty-all-4.0.10.Final.jar for potential mods
+[00:32:14] [Server thread/DEBUG] [FML/]: The mod container netty-all-4.0.10.Final.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file authlib-1.5.16.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container authlib-1.5.16.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file guava-17.0.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container guava-17.0.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file commons-lang3-3.3.2.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container commons-lang3-3.3.2.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file commons-io-2.4.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container commons-io-2.4.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file commons-codec-1.9.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container commons-codec-1.9.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file gson-2.2.4.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container gson-2.2.4.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file log4j-core-2.0-beta9.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container log4j-core-2.0-beta9.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file log4j-api-2.0-beta9.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container log4j-api-2.0-beta9.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file snakeyaml-1.16.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container snakeyaml-1.16.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file disruptor-3.2.1.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container disruptor-3.2.1.jar appears to be missing an mcmod.info file
+[00:32:15] [Server thread/DEBUG] [FML/]: Examining file koloboke-impl-jdk8-0.6.8.jar for potential mods
+[00:32:15] [Server thread/DEBUG] [FML/]: The mod container koloboke-impl-jdk8-0.6.8.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file koloboke-api-jdk8-0.6.8.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container koloboke-api-jdk8-0.6.8.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file jline-2.13.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container jline-2.13.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file mysql-connector-java-5.1.31.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container mysql-connector-java-5.1.31.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-linux.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-linux.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-windows.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-windows.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-osx.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-osx.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-windows-32.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-windows-32.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-windows-64.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-windows-64.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-osx.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-osx.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file twitch-external-platform-4.5-natives-windows-32.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container twitch-external-platform-4.5-natives-windows-32.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file twitch-external-platform-4.5-natives-windows-64.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container twitch-external-platform-4.5-natives-windows-64.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file commons-pool2-2.4.2.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container commons-pool2-2.4.2.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-windows.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-windows.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-linux.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-linux.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-osx.jar for potential mods
+[00:32:17] [Server thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-osx.jar appears to be missing an mcmod.info file
+[00:32:17] [Server thread/INFO] [FML/]: Forge Mod Loader has identified 4 mods to load
+[00:32:17] [Server thread/TRACE] [FML/]: Received a system property request ''
+[00:32:17] [Server thread/TRACE] [FML/]: System property request managing the state of 0 mods
+[00:32:17] [Server thread/DEBUG] [FML/]: After merging, found state information for 0 mods
+[00:32:17] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.SaveHandler.setSessionLock()V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:17] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.SaveHandler.loadWorldInfo()Lnet/minecraft/world/storage/WorldInfo;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:17] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.SaveHandler.loadWorldInfo()Lnet/minecraft/world/storage/WorldInfo;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:17] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.SaveHandler.saveWorldInfo(Lnet/minecraft/world/storage/WorldInfo;)V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:18] [Server thread/TRACE] [FML/]: Verifying mod requirements are satisfied
+[00:32:18] [Server thread/TRACE] [FML/]: All mod requirements are satisfied
+[00:32:18] [Server thread/TRACE] [FML/]: Sorting mods into an ordered list
+[00:32:18] [Server thread/TRACE] [FML/]: Mod sorting completed successfully
+[00:32:18] [Server thread/DEBUG] [FML/]: Mod sorting data
+[00:32:18] [Server thread/DEBUG] [FML/]: No user mods found to sort
+[00:32:18] [Server thread/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
+[00:32:18] [Server thread/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0,002s
+[00:32:18] [Server thread/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
+[00:32:18] [Server thread/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
+[00:32:18] [Server thread/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[00:32:18] [Server thread/TRACE] [FML/FML]: The mod FML accepts its own version (7.10.99.99)
+[00:32:18] [Server thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, UltramineServer] at CLIENT
+[00:32:18] [Server thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, UltramineServer] at SERVER
+[00:32:18] [Server thread/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0,159s
+[00:32:18] [Server thread/TRACE] [Forge/Forge]: Sending event FMLConstructionEvent to mod Forge
+[00:32:18] [Server thread/TRACE] [FML/Forge]: Mod Forge is using network checker : No network checking performed
+[00:32:18] [Server thread/TRACE] [FML/Forge]: Testing mod Forge to verify it accepts its own version in a remote connection
+[00:32:18] [Server thread/TRACE] [FML/Forge]: The mod Forge accepts its own version (10.13.4.1614)
+[00:32:18] [Server thread/TRACE] [Forge/Forge]: Sent event FMLConstructionEvent to mod Forge
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0,004s
+[00:32:18] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLConstructionEvent to mod UltramineServer
+[00:32:18] [Server thread/TRACE] [FML/UltramineServer]: Mod UltramineServer is using network checker : Invoking method networkCheck
+[00:32:18] [Server thread/TRACE] [FML/UltramineServer]: Testing mod UltramineServer to verify it accepts its own version in a remote connection
+[00:32:18] [Server thread/TRACE] [FML/UltramineServer]: The mod UltramineServer accepts its own version (@version@)
+[00:32:18] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLConstructionEvent to mod UltramineServer
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: Construction - Ultramine Server took 0,000s
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Finished: Construction took 0,166s
+[00:32:18] [Server thread/DEBUG] [FML/]: Mod signature data
+[00:32:18] [Server thread/DEBUG] [FML/]:  	Valid Signatures:
+[00:32:18] [Server thread/DEBUG] [FML/]:  	Missing Signatures:
+[00:32:18] [Server thread/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.05)	minecraft.jar
+[00:32:18] [Server thread/DEBUG] [FML/]: 		FML	(Forge Mod Loader	7.10.99.99)	main
+[00:32:18] [Server thread/DEBUG] [FML/]: 		Forge	(Minecraft Forge	10.13.4.1614)	main
+[00:32:18] [Server thread/DEBUG] [FML/]: 		UltramineServer	(Ultramine Server	@version@)	main
+[00:32:18] [Server thread/INFO] [FML/]: Processing ObjectHolder annotations
+[00:32:18] [Server thread/INFO] [FML/]: Found 341 ObjectHolder annotations
+[00:32:18] [Server thread/INFO] [FML/]: Identifying ItemStackHolder annotations
+[00:32:18] [Server thread/INFO] [FML/]: Found 0 ItemStackHolder annotations
+[00:32:18] [Server thread/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
+[00:32:18] [Server thread/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0,000s
+[00:32:18] [Server thread/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
+[00:32:18] [Server thread/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0,000s
+[00:32:18] [Server thread/TRACE] [Forge/Forge]: Sending event FMLPreInitializationEvent to mod Forge
+[00:32:18] [Server thread/INFO] [FML/Forge]: Configured a dormant chunk cache size of 0
+[00:32:18] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/Forge]: Method net.minecraftforge.common.ForgeVersion$1.run()V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:18] [Server thread/TRACE] [Forge/Forge]: Sent event FMLPreInitializationEvent to mod Forge
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0,018s
+[00:32:18] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLPreInitializationEvent to mod UltramineServer
+[00:32:18] [Forge Version Check/ERROR] [org.ultramine.server.internal.UMHooks/Forge]: Direct Throwable.printStackTrace() call
+[00:32:18] [Forge Version Check/ERROR] [org.ultramine.server.internal.UMHooks/Forge]: On unknown action in thread Forge Version Check
+[00:32:18] [Forge Version Check/ERROR] [org.ultramine.server.internal.UMHooks/Forge]: Invoked here
+java.lang.Throwable: stacktrace
+	at org.ultramine.server.internal.UMHooks.printStackTrace(UMHooks.java:107) ~[UMHooks.class:?]
+	at net.minecraftforge.common.ForgeVersion$1.run(ForgeVersion.java:142) ~[ForgeVersion$1.class:?]
+[00:32:18] [Forge Version Check/ERROR] [org.ultramine.server.internal.UMHooks/Forge]: Original stacktrace
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.Gson.fromJson(Gson.java:815) ~[Gson.class:?]
+	at com.google.gson.Gson.fromJson(Gson.java:768) ~[Gson.class:?]
+	at com.google.gson.Gson.fromJson(Gson.java:717) ~[Gson.class:?]
+	at com.google.gson.Gson.fromJson(Gson.java:689) ~[Gson.class:?]
+	at net.minecraftforge.common.ForgeVersion$1.run(ForgeVersion.java:94) ~[ForgeVersion$1.class:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374) ~[JsonReader.class:?]
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183) ~[MapTypeAdapterFactory$Adapter.class:?]
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145) ~[MapTypeAdapterFactory$Adapter.class:?]
+	at com.google.gson.Gson.fromJson(Gson.java:803) ~[Gson.class:?]
+	... 4 more
+[00:32:18] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLPreInitializationEvent to mod UltramineServer
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Step: PreInitialization - Ultramine Server took 0,423s
+[00:32:18] [Server thread/DEBUG] [FML/]: Bar Finished: PreInitialization took 0,442s
+[00:32:18] [Server thread/INFO] [FML/]: Applying holder lookups
+[00:32:18] [Server thread/INFO] [FML/]: Holder lookups applied
+[00:32:18] [Server thread/INFO] [FML/]: Injecting itemstacks
+[00:32:18] [Server thread/INFO] [FML/]: Itemstack injection complete
+[00:32:18] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Loading properties
+[00:32:18] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Default game type: SURVIVAL
+[00:32:18] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Generating keypair
+[00:32:19] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting Minecraft server on *:25565
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0,000s
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLInitializationEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLInitializationEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: Initialization - Ultramine Server took 0,014s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: Initialization took 0,014s
+[00:32:19] [Server thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0,002s
+[00:32:19] [Server thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event IMCEvent to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event IMCEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event IMCEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event IMCEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Ultramine Server took 0,000s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0,002s
+[00:32:19] [Server thread/INFO] [FML/]: Injecting itemstacks
+[00:32:19] [Server thread/INFO] [FML/]: Itemstack injection complete
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLPostInitializationEvent to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLPostInitializationEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0,055s
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLPostInitializationEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLPostInitializationEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: PostInitialization - Ultramine Server took 0,037s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: PostInitialization took 0,092s
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLLoadCompleteEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/Forge]: Forge RecipeSorter Baking:
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   11: RecipeEntry("Before", UNKNOWN, )
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   10: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   9: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   8: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   7: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   6: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   5: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   4: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   3: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   2: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[00:32:19] [Server thread/DEBUG] [FML/Forge]:   1: RecipeEntry("After", UNKNOWN, )
+[00:32:19] [Server thread/DEBUG] [FML/Forge]: Sorting recipies
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLLoadCompleteEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0,008s
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLLoadCompleteEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLLoadCompleteEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: LoadComplete - Ultramine Server took 0,000s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: LoadComplete took 0,008s
+[00:32:19] [Server thread/DEBUG] [FML/]: Freezing block and item id maps
+[00:32:19] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[00:32:19] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[00:32:19] [Server thread/INFO] [FML/]: Forge Mod Loader has successfully loaded 4 mods
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerAboutToStartEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerAboutToStartEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Coder Pack took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event FMLServerAboutToStartEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event FMLServerAboutToStartEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerAboutToStartEvent to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerAboutToStartEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Forge took 0,000s
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLServerAboutToStartEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLServerAboutToStartEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Ultramine Server took 0,020s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: ServerAboutToStart took 0,020s
+[00:32:19] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Preparing level "world"
+[00:32:19] [Server thread/INFO] [FML/]: Injecting existing block and item data into this server instance
+[00:32:19] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[00:32:19] [Server thread/DEBUG] [FML/]: Registry consistency check successful
+[00:32:19] [Netty IO #1/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@185209eb to net.minecraft.server.network.NetHandlerHandshakeTCP@50a18495
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLModIdMappingEvent to mod mcp
+[00:32:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLModIdMappingEvent to mod mcp
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Coder Pack took 0,000s
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sending event FMLModIdMappingEvent to mod FML
+[00:32:19] [Server thread/TRACE] [FML/FML]: Sent event FMLModIdMappingEvent to mod FML
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ModIdMapping - Forge Mod Loader took 0,000s
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLModIdMappingEvent to mod Forge
+[00:32:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLModIdMappingEvent to mod Forge
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Forge took 0,004s
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLModIdMappingEvent to mod UltramineServer
+[00:32:19] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLModIdMappingEvent to mod UltramineServer
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Step: ModIdMapping - Ultramine Server took 0,001s
+[00:32:19] [Server thread/DEBUG] [FML/]: Bar Finished: ModIdMapping took 0,005s
+[00:32:19] [Server thread/INFO] [FML/]: Applying holder lookups
+[00:32:19] [Server thread/INFO] [FML/]: Holder lookups applied
+[00:32:19] [Server thread/DEBUG] [FML/]: Loading persistent fluid defaults from world
+[00:32:19] [Server thread/DEBUG] [FML/]: The fluid minecraft:lava has been selected as the default fluid for lava
+[00:32:19] [Server thread/DEBUG] [FML/]: The fluid minecraft:water has been selected as the default fluid for water
+[00:32:19] [Netty IO #1/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.village.VillageSiege.spawnZombie()Z: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.MapStorage.loadData(Ljava/lang/Class;Ljava/lang/String;)Lnet/minecraft/world/WorldSavedData;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.MapStorage.saveData(Lnet/minecraft/world/WorldSavedData;)V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.MapStorage.loadIdCounts()V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.MapStorage.getUniqueDataId(Ljava/lang/String;)I: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Netty IO #1/DEBUG] [net.minecraft.network.NetworkManager/]: Disabled auto read
+[00:32:19] [Netty IO #1/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:19] [Netty IO #2/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@3d6894b to net.minecraft.server.network.NetHandlerHandshakeTCP@7e90de9
+[00:32:19] [Netty IO #2/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:19] [Netty IO #2/DEBUG] [net.minecraft.network.PingResponseHandler/]: Ping: (1.6) from /127.0.0.1:49175
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.AnvilChunkLoader.loadChunk__Async(Lnet/minecraft/world/World;II)[Ljava/lang/Object;: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.AnvilChunkLoader.saveChunk(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:19] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.AnvilChunkLoader.writeNextIO()Z: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:20] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.SpawnerAnimals.findChunksForSpawning(Lnet/minecraft/world/WorldServer;ZZZ)I: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:20] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.SpawnerAnimals.performWorldGenSpawning(Lnet/minecraft/world/World;Lnet/minecraft/world/biome/BiomeGenBase;IIIILjava/util/Random;)V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:20] [Server thread/INFO] [FML/]: Loading dimension 0 (world) (net.minecraft.server.dedicated.DedicatedServer@3af03b0b)
+[00:32:20] [Server thread/INFO] [FML/]: Loading dimension 1 (world_the_end) (net.minecraft.server.dedicated.DedicatedServer@3af03b0b)
+[00:32:20] [Server thread/INFO] [FML/]: Loading dimension -1 (world_nether) (net.minecraft.server.dedicated.DedicatedServer@3af03b0b)
+[00:32:20] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done (0,745s)! For help, type "help" or "?"
+[00:32:20] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartingEvent to mod mcp
+[00:32:20] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartingEvent to mod mcp
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Coder Pack took 0,000s
+[00:32:20] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartingEvent to mod FML
+[00:32:20] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartingEvent to mod FML
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Forge Mod Loader took 0,000s
+[00:32:20] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartingEvent to mod Forge
+[00:32:20] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartingEvent to mod Forge
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Forge took 0,002s
+[00:32:20] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLServerStartingEvent to mod UltramineServer
+[00:32:20] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLServerStartingEvent to mod UltramineServer
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Ultramine Server took 0,013s
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarting took 0,015s
+[00:32:20] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartedEvent to mod mcp
+[00:32:20] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartedEvent to mod mcp
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Coder Pack took 0,000s
+[00:32:20] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartedEvent to mod FML
+[00:32:20] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartedEvent to mod FML
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Forge Mod Loader took 0,000s
+[00:32:20] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartedEvent to mod Forge
+[00:32:20] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartedEvent to mod Forge
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Forge took 0,000s
+[00:32:20] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sending event FMLServerStartedEvent to mod UltramineServer
+[00:32:20] [Server thread/TRACE] [UltramineServer/UltramineServer]: Sent event FMLServerStartedEvent to mod UltramineServer
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Ultramine Server took 0,053s
+[00:32:20] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarted took 0,053s
+[00:32:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Server loading totally finished
+[00:32:21] [Netty IO #3/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@60978501 to net.minecraft.server.network.NetHandlerHandshakeTCP@64a81dcb
+[00:32:21] [Netty IO #3/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:21] [Netty IO #3/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:21] [Netty IO #3/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@60978501 to net.minecraft.server.network.NetHandlerStatusServer@34a3ea84
+[00:32:22] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@30d8b629 to net.minecraft.server.network.NetHandlerHandshakeTCP@34e724ea
+[00:32:22] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:22] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:22] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@30d8b629 to net.minecraft.server.network.NetHandlerLoginServer@4d1373c1
+[00:32:23] [Server thread/DEBUG] [net.minecraft.network.NetworkManager/]: Possible lag source on processiong packet C01PacketEncryptionResponse from null 265ms
+[00:32:23] [UM IO cached  #0/DEBUG] [com.mojang.authlib.HttpAuthenticationService/]: Opening connection to https://sessionserver.mojang.com/session/minecraft/hasJoined?serverId=2a8f6a18f5969b72b3f191a40f290aca615b1ced&username=Zitata
+[00:32:23] [UM IO cached  #0/DEBUG] [com.mojang.authlib.HttpAuthenticationService/]: Reading data from https://sessionserver.mojang.com/session/minecraft/hasJoined?serverId=2a8f6a18f5969b72b3f191a40f290aca615b1ced&username=Zitata
+[00:32:24] [UM IO cached  #0/DEBUG] [com.mojang.authlib.HttpAuthenticationService/]: Successful read, server response was 200
+[00:32:24] [UM IO cached  #0/DEBUG] [com.mojang.authlib.HttpAuthenticationService/]: Response: {
+  "id" : "7d0d143e030849c7a2b6e13cd328d744",
+  "name" : "Zitata",
+  "properties" : [ {
+    "name" : "textures",
+    "value" : "ewogICJ0aW1lc3RhbXAiIDogMTcyMTg1Njc0MzIyNSwKICAicHJvZmlsZUlkIiA6ICI3ZDBkMTQzZTAzMDg0OWM3YTJiNmUxM2NkMzI4ZDc0NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJaaXRhdGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTkxMGQxZDFkODI3YTkxMTU0ODBiZmY1YmUzODkxZWE5MjA2ODBlNzBjZTdiNzEwZGJkYTllNTlhYjJmMWZjZSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
+    "signature" : "GsFG8qmoK9imX17ScSgOdlnJb1b0ppebRou8sIKfk2bo88IZ0A91mSc74D3KZ701s6iA6FDTrrC3OGI40NwJaNRrVss4CDw35JBwLu4uCUHdAwXNrCH63Y7efcMJr/WoXwWfDTQZutmmSofBEHbjpsnYiBlcX6ViSJbQmKTSPWwUVjnvlmOKLBZSEId+RHGVMY01Ne+NzrZ4+DvC2H/zQ7QABg5/qOKNcnIyvg5pq84PtkQR1E1zqOBoY69fjcN6vgJzVgUCbxs02efBe5pCJ29opfpjKjkXmQaCgcwTjm3C72xho1Vz/yudcGf4clZ9mjljeqpohoL4T5L2zkoVaQ44pEW7aKziLTT6L5aZb13+D8b3mfKvnCCd8hLdx+JHFgo153pYengsorSjfdBmr6UuYOAawYWMdlB45w1bswy2SlLCE7TCqZddmKVp1gwIK1Z1gE2k+zH1Jw1LG77jP2fvG50Kjd2CUyAb8xFDW9COG69XpB33mWk7EcWIZLVjh9RgYa2H8ZyoHnVOBhDxN155g60OM3f4QlBx3e5Ky5K9YAaTOFvRxifJlyNZ4m2pQFUaP/GJK0gos5iGm0F1xZU3c2cOLuIQQypnbQkcqOs3rWfxzbVjl/nKTJIILVUbhC9rXBXl1o1IjuOE5JSlP1wlgPZrlU2yYc9YWQUR+YI="
+  } ],
+  "profileActions" : [ ]
+}
+[00:32:24] [UM IO cached  #0/INFO] [net.minecraft.server.network.NetHandlerLoginServer/]: [Connect]    User 'Zitata' UUID: '7d0d143e-0308-49c7-a2b6-e13cd328d744'
+[00:32:24] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Set listener of net.minecraft.network.NetworkManager@30d8b629 to net.minecraft.network.NetHandlerPlayServer@765aa32d
+[00:32:24] [Netty IO #4/DEBUG] [net.minecraft.network.NetworkManager/]: Enabled auto read
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $ClientHello->FMLHandshakeServerState$2:HELLO
+[00:32:24] [Netty IO #4/DEBUG] [FML/]: Client protocol version 2
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $ModList:3 mods->FMLHandshakeServerState$2:HELLO
+[00:32:24] [Netty IO #4/DEBUG] [FML/]: Client attempting to join with 3 mods : FML@7.10.99.99,Forge@10.13.4.1614,mcp@9.05
+[00:32:24] [Netty IO #4/INFO] [FML/]: Attempting connection with missing mods [UltramineServer] at CLIENT
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $HandshakeAck:{2}->FMLHandshakeServerState$3:WAITINGCACK
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $HandshakeAck:{3}->FMLHandshakeServerState$4:COMPLETE
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $HandshakeAck:{4}->FMLHandshakeServerState$5:DONE
+[00:32:24] [Netty IO #4/TRACE] [FML/]: $HandshakeAck:{5}->FMLHandshakeServerState$5:DONE
+[00:32:24] [Server thread/DEBUG] [FML/]: [Server thread] Server side modded connection established
+[00:32:24] [Server thread/DEBUG] [net.minecraft.server.management.ServerConfigurationManager/]: Zitata[/127.0.0.1:49178] logged in with entity id 0 at (2.8158863638295584, 73.0, 88.38100012804101)
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method org.ultramine.server.util.ChunkCoordComparator.<clinit>()V: Replacing INVOKEVIRTUAL java/lang/Throwable.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.RegionFileCache.createOrLoadRegionFile(Ljava/io/File;II)Lnet/minecraft/world/chunk/storage/RegionFile;: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.RegionFileCache.clearRegionFileReferences()V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.RegionFile.<init>(Ljava/io/File;)V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.chunk.storage.RegionFile.write(II[BI)V: Replacing INVOKEVIRTUAL java/io/IOException.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Chunk I/O Executor Thread-1/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method org.ultramine.server.chunk.alloc.unsafe.AbstractUnsafeMemSlot.finalize()V: Replacing INVOKEVIRTUAL java/lang/Throwable.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.gen.structure.MapGenStructureIO.func_143035_a(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/world/gen/structure/StructureStart;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.gen.structure.MapGenStructureIO.func_143032_b(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/world/gen/structure/StructureComponent;: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.ai.EntityLookHelper.onUpdateLook()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.ai.EntityLookHelper.onUpdateLook()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:24] [Server thread/TRACE] [org.ultramine.server.asm.transformers.TrigMathTransformer/]: Method net.minecraft.entity.ai.EntityMoveHelper.onUpdateMoveHelper()V: Replacing INVOKESTATIC Math.atan2 with INVOKESTATIC TrigMath.atan2
+[00:32:25] [Server thread/DEBUG] [FML/]: Possible lag source Entity EntityPlayerMP['Zitata'/0, l='world', x=3,00, y=73,00, z=88,44] 23ms
+[00:32:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Zitata: Set own game mode to Creative Mode]
+[00:32:38] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Zitata: Set the time to 1000]
+[00:34:20] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save world
+[00:34:20] [Server thread/TRACE] [org.ultramine.server.asm.transformers.PrintStackTraceTransformer/]: Method net.minecraft.world.storage.SaveHandler$1.run()V: Replacing INVOKEVIRTUAL java/lang/Exception.printStackTrace with INVOKESTATIC UMHooks.printStackTrace
+[00:34:20] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save world_nether
+[00:34:20] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save world_the_end

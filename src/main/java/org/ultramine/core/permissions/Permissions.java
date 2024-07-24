@@ -72,6 +72,6 @@ public interface Permissions
 
 	default boolean useVanillaCommandPermissions()
 	{
-		return false;
+		return true; // TODO DDDD
 	}
 }

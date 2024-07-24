@@ -103,26 +103,6 @@ public class ServerDataLoader
 		return warps;
 	}
 	
-	public void addFastWarp(String name)
-	{
-		if(fastWarps.add(name))
-		{
-			dataProvider.saveFastWarp(name);
-			((CommandHandler)mgr.getServerInstance().getCommandManager()).getRegistry().registerCommand(new FastWarpCommand(name));
-		}
-	}
-	
-	public boolean removeFastWarp(String name)
-	{
-		if(fastWarps.remove(name))
-		{
-			dataProvider.removeFastWarp(name);
-			((CommandHandler)mgr.getServerInstance().getCommandManager()).getRegistry().getCommandMap().remove(name);
-			return true;
-		}
-		return false;
-	}
-	
 	public List<String> getFastWarps()
 	{
 		return fastWarps;
