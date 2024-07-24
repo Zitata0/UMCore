@@ -1,7 +1,0 @@
-groups:
-    default:
-        inherits: ''
-        global:
-            meta: {}
-            permissions: []
-        worlds: {}
