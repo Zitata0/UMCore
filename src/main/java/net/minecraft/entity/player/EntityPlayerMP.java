@@ -73,6 +73,7 @@ import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.ItemInWorldManager;
+import net.minecraft.server.management.UserListOpsEntry;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.stats.StatBase;
 import net.minecraft.stats.StatList;
@@ -912,9 +913,28 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 		this.playerNetServerHandler.sendPacket(new S02PacketChat(UMHooks.onChatSend(this, p_145747_1_)));
 	}
 
-	public boolean canCommandSenderUseCommand(int p_70003_1_, String p_70003_2_)
+	public boolean canCommandSenderUseCommand(int i, String str)
 	{
-		return true;
+		if ("seed".equals(str) && !this.mcServer.isDedicatedServer())
+		{
+			return true;
+		}
+		else if (!"tell".equals(str) && !"help".equals(str) && !"me".equals(str))
+		{
+			if (this.mcServer.getConfigurationManager().func_152596_g(this.getGameProfile()))
+			{
+				UserListOpsEntry userlistopsentry = (UserListOpsEntry)this.mcServer.getConfigurationManager().func_152603_m().func_152683_b(this.getGameProfile());
+				return userlistopsentry != null ? userlistopsentry.func_152644_a() >= i : this.mcServer.getOpPermissionLevel() >= i;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
 	}
 
 	public String getPlayerIP()
