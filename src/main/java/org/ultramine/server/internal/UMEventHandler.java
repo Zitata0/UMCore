@@ -36,17 +36,13 @@ import net.minecraft.world.ChunkPosition;
 
 import static net.minecraft.util.EnumChatFormatting.*;
 
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import org.ultramine.core.permissions.Permissions;
 
 public class UMEventHandler
 {
-	@InjectService private static Permissions perms;
-
 	@SideOnly(Side.SERVER)
 	@SubscribeEvent(priority = EventPriority.HIGH)
 	public void checkChatPermission(ServerChatEvent e)
@@ -73,24 +69,6 @@ public class UMEventHandler
 			e.setCanceled(true);
 			e.player.addChatMessage(new ChatComponentTranslation("ultramine.hidden.chat").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 		}
-	}
-	
-	@SubscribeEvent
-	public void onServerChat(ServerChatEvent e)
-	{
-		if(e.player.playerNetServerHandler == null || e.player.getData() == null)
-			return;
-		String prefix = perms.getMeta(e.player, "prefix").replace('&', '\u00A7');
-		String postfix = perms.getMeta(e.player, "postfix").replace('&', '\u00A7');
-		
-		ChatComponentStyle username = (ChatComponentStyle) e.player.func_145748_c_();
-		IChatComponent msg = ForgeHooks.newChatWithLinks(e.message);
-		
-		username.getChatStyle().setColor(BasicTypeParser.parseColor(perms.getMeta(e.player, "color")));
-		EnumChatFormatting color = BasicTypeParser.parseColor(perms.getMeta(e.player, "textcolor"));
-		msg.getChatStyle().setColor(color != null ? color : EnumChatFormatting.WHITE);
-		
-		e.component = new ChatComponentTranslation("%s%s%s\u00A77: %s", prefix, username, postfix, msg);
 	}
 	
 	@SubscribeEvent(priority = EventPriority.HIGH)
@@ -158,9 +136,6 @@ public class UMEventHandler
 				full.getChatStyle().setColor(YELLOW);
 				
 				server.addChatMessage(full);
-				for(EntityPlayerMP player : GenericIterableFactory.newCastingIterable(server.getConfigurationManager().playerEntityList, EntityPlayerMP.class))
-					if(perms.has(player, "show.debuginfo"))
-						player.addChatMessage(full);
 			}
 			
 			AutoBroacastConf msgcfg = ConfigurationHandler.getServerConfig().tools.autobroadcast;
@@ -253,7 +228,5 @@ public class UMEventHandler
 	{
 		if(e.damageSource == DamageSource.command)
 			e.setDeathMessage(null);
-		if(perms.has(e.entityPlayer, "ability.admin.keepinventory"))
-			e.setKeepInventory(true);
 	}
 }

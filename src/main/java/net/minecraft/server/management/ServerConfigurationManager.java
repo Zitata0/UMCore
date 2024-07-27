@@ -69,7 +69,6 @@ import net.minecraft.world.storage.IPlayerFileData;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ultramine.core.permissions.MinecraftPermissions;
 import org.ultramine.server.ConfigurationHandler;
 import org.ultramine.server.data.ServerDataLoader;
 import org.ultramine.server.internal.UMHooks;
@@ -178,8 +177,7 @@ public abstract class ServerConfigurationManager
 		}
 
 		chatcomponenttranslation.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-		if(!p_72355_2_.isHidden() && !p_72355_2_.hasPermission(MinecraftPermissions.HIDE_JOIN_MESSAGE))
-			sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
+		sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
 		this.playerLoggedIn(p_72355_2_);
 		nethandlerplayserver.setPlayerLocation(p_72355_2_.posX, p_72355_2_.posY, p_72355_2_.posZ, p_72355_2_.rotationYaw, p_72355_2_.rotationPitch);
 		this.updateTimeAndWeatherForPlayer(p_72355_2_, worldserver);
@@ -315,39 +313,26 @@ public abstract class ServerConfigurationManager
 		}
 	}
 
-	public void playerLoggedIn(final EntityPlayerMP par1EntityPlayerMP)
+	public void playerLoggedIn(final EntityPlayerMP entityPlayerMP)
 	{
-		if(!par1EntityPlayerMP.isHidden())
-			this.sendPacketToAllPlayers(new S38PacketPlayerListItem(par1EntityPlayerMP.getTabListName(), true, 1000));
-		else
-		{
-			for(Object o : playerEntityList)
-			{
-				EntityPlayerMP p = (EntityPlayerMP)o;
-				if(p.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS))
-					p.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(par1EntityPlayerMP.getTabListName(), true, 1000));
-			}
-		}
-		this.playerEntityList.add(par1EntityPlayerMP);
-		usernameToPlayerMap.put(par1EntityPlayerMP.getGameProfile().getName().toLowerCase(), par1EntityPlayerMP);
-		final WorldServer worldserver = this.mcServer.worldServerForDimension(par1EntityPlayerMP.dimension);
-		
-		
-		int cx = MathHelper.floor_double(par1EntityPlayerMP.posX) >> 4;
-		int cz = MathHelper.floor_double(par1EntityPlayerMP.posZ) >> 4;
-		worldserver.spawnEntityInWorld(par1EntityPlayerMP);
-		func_72375_a(par1EntityPlayerMP, (WorldServer)null);
+		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(entityPlayerMP.getCommandSenderName(), true, 1000));
+		this.playerEntityList.add(entityPlayerMP);
+		usernameToPlayerMap.put(entityPlayerMP.getGameProfile().getName().toLowerCase(), entityPlayerMP);
+		final WorldServer worldserver = this.mcServer.worldServerForDimension(entityPlayerMP.dimension);
 
-		boolean seeInvisible = par1EntityPlayerMP.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS);
+		int cx = MathHelper.floor_double(entityPlayerMP.posX) >> 4;
+		int cz = MathHelper.floor_double(entityPlayerMP.posZ) >> 4;
+		worldserver.spawnEntityInWorld(entityPlayerMP);
+		func_72375_a(entityPlayerMP, (WorldServer)null);
+
 		for (int i = 0; i < this.playerEntityList.size(); ++i)
 		{
 			EntityPlayerMP entityplayermp1 = (EntityPlayerMP)this.playerEntityList.get(i);
-			if(!entityplayermp1.isHidden() || seeInvisible)
-				par1EntityPlayerMP.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp1.getTabListName(), true, entityplayermp1.ping));
+			entityPlayerMP.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp1.getCommandSenderName(), true, entityplayermp1.ping));
 		}
 		
-		if(par1EntityPlayerMP.isHidden())
-			CommandBase.func_152374_a(par1EntityPlayerMP, null, 1, "ultramine.notify.loggedhidden");
+		if(entityPlayerMP.isHidden())
+			CommandBase.func_152374_a(entityPlayerMP, null, 1, "ultramine.notify.loggedhidden");
 	}
 
 	public void updatePlayerPertinentChunks(EntityPlayerMP p_72358_1_)
@@ -373,7 +358,7 @@ public abstract class ServerConfigurationManager
 		this.playerEntityList.remove(p_72367_1_);
 		usernameToPlayerMap.remove(p_72367_1_.getGameProfile().getName().toLowerCase());
 		this.field_148547_k.remove(p_72367_1_.getUniqueID());
-		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(p_72367_1_.getTabListName(), false, 9999));
+		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(p_72367_1_.getCommandSenderName(), false, 9999));
 	}
 
 	public String allowUserToConnect(SocketAddress p_148542_1_, GameProfile p_148542_2_)
@@ -701,17 +686,7 @@ public abstract class ServerConfigurationManager
 		if (this.playerPingIndex < this.playerEntityList.size())
 		{
 			EntityPlayerMP entityplayermp = (EntityPlayerMP)this.playerEntityList.get(this.playerPingIndex);
-			if(!entityplayermp.isHidden())
-				this.sendPacketToAllPlayers(new S38PacketPlayerListItem(entityplayermp.getTabListName(), true, entityplayermp.ping));
-			else
-			{
-				for(Object o : playerEntityList)
-				{
-					EntityPlayerMP p = (EntityPlayerMP)o;
-					if(p.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS))
-						p.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp.getTabListName(), true, entityplayermp.ping));
-				}
-			}
+			sendPacketToAllPlayers(new S38PacketPlayerListItem(entityplayermp.getCommandSenderName(), true, entityplayermp.ping));
 		}
 	}
 

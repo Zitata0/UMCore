@@ -4,16 +4,9 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
-import net.minecraft.command.CommandHandler;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 
-import org.ultramine.commands.CommandRegistry;
-import org.ultramine.commands.basic.FastWarpCommand;
-import org.ultramine.commands.syntax.DefaultCompleters;
-import org.ultramine.core.economy.service.DefaultHoldingsProvider;
-import org.ultramine.core.economy.service.Economy;
-import org.ultramine.core.economy.service.EconomyRegistry;
 import org.ultramine.core.service.InjectService;
 import org.ultramine.core.service.ServiceManager;
 import org.ultramine.server.chunk.AntiXRayService;
@@ -24,13 +17,9 @@ import org.ultramine.server.chunk.alloc.unsafe.UnsafeChunkAlloc;
 import org.ultramine.server.data.Databases;
 import org.ultramine.server.data.ServerDataLoader;
 import org.ultramine.server.data.player.PlayerCoreData;
-import org.ultramine.server.economy.UMIntegratedHoldingsProvider;
-import org.ultramine.server.economy.UMEconomy;
-import org.ultramine.server.economy.UMEconomyRegistry;
 import org.ultramine.server.event.ForgeModIdMappingEvent;
 import org.ultramine.server.internal.SyncServerExecutorImpl;
 import org.ultramine.server.internal.UMEventHandler;
-import org.ultramine.server.internal.OpBasedPermissions;
 import org.ultramine.server.tools.ItemBlocker;
 import org.ultramine.server.util.GlobalExecutors;
 
@@ -54,14 +43,11 @@ import cpw.mods.fml.common.event.FMLServerStoppedEvent;
 import cpw.mods.fml.common.network.NetworkCheckHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
-import org.ultramine.core.permissions.Permissions;
 
 public class UltramineServerModContainer extends DummyModContainer
 {
 	private static UltramineServerModContainer instance;
 	@InjectService private static ServiceManager services;
-	@InjectService private static Permissions perms;
-	@InjectService private static EconomyRegistry economyRegistry;
 
 	private LoadController controller;
 	private ItemBlocker itemBlocker;
@@ -109,17 +95,7 @@ public class UltramineServerModContainer extends DummyModContainer
 				Databases.init();
 				MinecraftServer.getServer().getMultiWorld().preloadConfigs();
 				ConfigurationHandler.postWorldDescsLoad();
-
-				services.register(EconomyRegistry.class, new UMEconomyRegistry(), 0);
-				services.register(Economy.class, new UMEconomy(), 0);
-				services.register(DefaultHoldingsProvider.class, new UMIntegratedHoldingsProvider(), 0);
 			}
-
-			OpBasedPermissions vanPerms = new OpBasedPermissions();
-			vanPerms.addDefault("command.vanilla.help");
-			vanPerms.addDefault("command.vanilla.msg");
-			vanPerms.addDefault("command.vanilla.reply");
-			services.register(Permissions.class, vanPerms, 0);
 		}
 		catch (Throwable t)
 		{

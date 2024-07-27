@@ -40,7 +40,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
-import org.ultramine.core.permissions.MinecraftPermissions;
 
 public class EntityTracker
 {
@@ -354,24 +353,6 @@ public class EntityTracker
 		}
 		
 		return null;
-	}
-	
-	public void hidePlayer(EntityPlayerMP player)
-	{
-		EntityTrackerEntry playerTracker = findPlayerTracker(player);
-		if(playerTracker != null)
-		{
-			for(Object o : trackedEntities)
-			{
-				EntityTrackerEntry ent = (EntityTrackerEntry)o;
-				if(ent.myEntity.isEntityPlayerMP())
-				{
-					EntityPlayerMP watcher = (EntityPlayerMP)ent.myEntity;
-					if(!watcher.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS))
-						playerTracker.removePlayerFromTracker(watcher);
-				}
-			}
-		}
 	}
 	
 	public void showPlayer(EntityPlayerMP player)

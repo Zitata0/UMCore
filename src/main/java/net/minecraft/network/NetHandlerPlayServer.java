@@ -96,12 +96,8 @@ import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-
-import org.ultramine.core.service.InjectService;
-import org.ultramine.core.permissions.MinecraftPermissions;
 import org.ultramine.server.event.PlayerSneakingEvent;
 import org.ultramine.server.event.PlayerSwingItemEvent;
-import org.ultramine.core.permissions.Permissions;
 
 public class NetHandlerPlayServer implements INetHandlerPlayServer
 {
@@ -124,7 +120,6 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer
 	private double lastPosZ;
 	private boolean hasMoved = true;
 	private static final String __OBFID = "CL_00001452";
-	@InjectService private static Permissions perms;
 
 	public NetHandlerPlayServer(MinecraftServer p_i1530_1_, NetworkManager p_i1530_2_, EntityPlayerMP p_i1530_3_)
 	{
@@ -183,7 +178,7 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer
 				NetHandlerPlayServer.this.netManager.closeChannel(chatcomponenttext);
 			}
 		}
-																									 });
+		});
 		this.netManager.disableAutoRead();
 	}
 
@@ -647,8 +642,7 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer
 		this.serverController.func_147132_au();
 		ChatComponentTranslation chatcomponenttranslation = new ChatComponentTranslation("multiplayer.player.left", new Object[] {this.playerEntity.func_145748_c_()});
 		chatcomponenttranslation.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-		if(!playerEntity.isHidden() && !playerEntity.hasPermission(MinecraftPermissions.HIDE_JOIN_MESSAGE))
-			this.serverController.getConfigurationManager().sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
+		this.serverController.getConfigurationManager().sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
 		this.playerEntity.mountEntityAndWakeUp();
 		this.serverController.getConfigurationManager().playerLoggedOut(this.playerEntity);
 
@@ -749,7 +743,7 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer
 
 			this.chatSpamThresholdCount += 20;
 
-			if (this.chatSpamThresholdCount > 200 && !perms.has(playerEntity, MinecraftPermissions.ALLOW_SPAM))
+			if (this.chatSpamThresholdCount > 200 && !this.serverController.getConfigurationManager().func_152596_g(this.playerEntity.getGameProfile()))
 			{
 				this.kickPlayerFromServer("disconnect.spam");
 			}

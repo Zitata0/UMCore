@@ -51,13 +51,13 @@ public class Teleporter
 	public static void tpLater(EntityPlayerMP target, WarpLocation dst)
 	{
 		long timeto = target.getData().core().getNextTeleportationTime() - System.currentTimeMillis();
-		if(timeto > 0 && !target.hasPermission("admin.abilities.skipteleportcooldown"))
+		if(timeto > 0)
 		{
 			target.addChatMessage(new ChatComponentTranslation("ultramine.teleporter.fail.cooldownd", timeto/1000).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 			return;
 		}
 		
-		if(!isServer || target.hasPermission("admin.abilities.skipteleportdelay"))
+		if(!isServer)
 		{
 			tpNow(target, dst);
 		}

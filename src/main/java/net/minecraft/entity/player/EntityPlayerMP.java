@@ -111,13 +111,11 @@ import org.ultramine.server.internal.UMHooks;
 import org.ultramine.server.chunk.ChunkSendManager;
 import org.ultramine.server.data.player.PlayerData;
 import org.ultramine.server.internal.UMEventFactory;
-import org.ultramine.server.util.BasicTypeParser;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
-import org.ultramine.core.permissions.Permissions;
 
 public class EntityPlayerMP extends EntityPlayer implements ICrafting
 {
@@ -1021,18 +1019,7 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	private int renderDistance;
 	private final ChunkSendManager chunkMgr = new ChunkSendManager(this);
 	private PlayerData playerData;
-	@InjectService private static Permissions perms;
 	@InjectService private static Economy economy;
-
-	public boolean hasPermission(String permission)
-	{
-		return perms.has(this, permission);
-	}
-
-	public String getMeta(String key)
-	{
-		return perms.getMeta(this, key);
-	}
 
 	public Account getAccount()
 	{
@@ -1069,14 +1056,6 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	{
 		playerData.setProfile(getGameProfile());
 		this.playerData = playerData;
-	}
-	
-	public String getTabListName()
-	{
-		String meta = getMeta("tablistcolor");
-		EnumChatFormatting color = meta.isEmpty() ? null : BasicTypeParser.parseColor(meta);
-		String name = color == null ? getCommandSenderName() : color.toString() + getCommandSenderName();
-		return name.length() > 16 ? name.substring(0, 16) : name;
 	}
 
 	public String translate(String key)
@@ -1155,26 +1134,6 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	public void setStatisticsFile(StatisticsFile stats)
 	{
 		this.field_147103_bO = stats;
-	}
-	
-	public void hide()
-	{
-		if(!isHidden())
-		{
-			getData().core().setHidden(true);
-			((WorldServer)worldObj).getEntityTracker().hidePlayer(this);
-			mcServer.getConfigurationManager().sendPacketToAllPlayers(new S38PacketPlayerListItem(getTabListName(), false, 9999));
-		}
-	}
-	
-	public void show()
-	{
-		if(isHidden())
-		{
-			getData().core().setHidden(false);
-			((WorldServer)worldObj).getEntityTracker().showPlayer(this);
-			mcServer.getConfigurationManager().sendPacketToAllPlayers(new S38PacketPlayerListItem(getTabListName(), true, ping));
-		}
 	}
 	
 	public boolean isHidden()

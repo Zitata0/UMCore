@@ -41,8 +41,6 @@ import net.minecraft.world.WorldType;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ultramine.core.service.InjectService;
-import org.ultramine.core.permissions.MinecraftPermissions;
 import org.ultramine.server.BackupManager;
 import org.ultramine.server.ConfigurationHandler;
 import org.ultramine.server.UltramineServerConfig;
@@ -52,7 +50,6 @@ import org.ultramine.server.internal.JLineSupport;
 import org.ultramine.server.internal.UMHooks;
 import org.ultramine.server.util.BasicTypeParser;
 import org.ultramine.server.util.GlobalExecutors;
-import org.ultramine.core.permissions.Permissions;
 
 @SideOnly(Side.SERVER)
 public class DedicatedServer extends MinecraftServer implements IServer
@@ -439,7 +436,7 @@ public class DedicatedServer extends MinecraftServer implements IServer
 		return 0;
 	}
 
-	public boolean isBlockProtected(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
+	public boolean isBlockProtected(World par1World, int par2, int par3, int par4, EntityPlayer entityPlayer)
 	{
 		if (par1World.provider.dimensionId != 0)
 		{
@@ -449,7 +446,7 @@ public class DedicatedServer extends MinecraftServer implements IServer
 		{
 			return false;
 		}
-		else if (perms.has(par5EntityPlayer, MinecraftPermissions.IGNORE_SPAWN_PROTECTION))
+		else if (this.getConfigurationManager().func_152596_g(entityPlayer.getGameProfile()))
 		{
 			return false;
 		}
@@ -574,7 +571,6 @@ public class DedicatedServer extends MinecraftServer implements IServer
 	
 	/* ======================================== ULTRAMINE START =====================================*/
 
-	@InjectService private static Permissions perms;
 	private final BackupManager backupMgr = new BackupManager(this);
 	
 	@Override
