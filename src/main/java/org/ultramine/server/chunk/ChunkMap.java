@@ -1,13 +1,11 @@
 package org.ultramine.server.chunk;
 
-import java.util.Collection;
-
 import net.minecraft.world.chunk.Chunk;
 import net.openhft.koloboke.collect.map.IntObjCursor;
 import net.openhft.koloboke.collect.map.IntObjMap;
 import net.openhft.koloboke.collect.map.hash.HashIntObjMaps;
 
-import org.ultramine.server.chunk.ChunkHash;
+import java.util.Collection;
 
 public class ChunkMap
 {

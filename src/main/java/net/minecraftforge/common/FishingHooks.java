@@ -1,12 +1,6 @@
 package net.minecraftforge.common;
 
 import com.google.common.base.Predicate;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-
 import net.minecraft.entity.projectile.EntityFishHook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatBase;
@@ -14,6 +8,10 @@ import net.minecraft.stats.StatList;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.WeightedRandom;
 import net.minecraft.util.WeightedRandomFishable;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
 
 public class FishingHooks
 {

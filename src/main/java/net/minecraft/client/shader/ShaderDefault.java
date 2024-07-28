@@ -2,6 +2,7 @@ package net.minecraft.client.shader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import javax.vecmath.Matrix4f;
 
 @SideOnly(Side.CLIENT)

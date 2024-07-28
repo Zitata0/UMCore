@@ -1,20 +1,13 @@
 package org.ultramine.server;
 
+import com.google.common.base.Function;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.functions.GenericIterableFactory;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicReference;
-
 import net.minecraft.command.CommandException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.play.server.S1DPacketEntityEffect;
@@ -29,7 +22,6 @@ import net.minecraft.world.storage.ThreadedFileIOBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.WorldEvent;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,12 +32,11 @@ import org.ultramine.server.util.GlobalExecutors;
 import org.ultramine.server.util.ZipUtil;
 import org.ultramine.server.world.WorldDescriptor;
 
-import com.google.common.base.Function;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.functions.GenericIterableFactory;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 
 @SideOnly(Side.SERVER)
 public class BackupManager

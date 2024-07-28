@@ -1,12 +1,12 @@
 package net.minecraftforge.event.entity.player;
 
-import java.io.File;
-
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
+
+import java.io.File;
 
 /**
  * PlayerEvent is fired whenever an event involving Living entities occurs. <br>

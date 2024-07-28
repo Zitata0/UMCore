@@ -3,9 +3,6 @@ package net.minecraft.util;
 import net.openhft.koloboke.collect.map.IntObjMap;
 import net.openhft.koloboke.collect.map.hash.HashIntObjMaps;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class IntHashMap
 {
 	private final IntObjMap<Object> map;

@@ -1,12 +1,9 @@
 package net.minecraft.entity.ai.attributes;
 
 import com.google.common.collect.Sets;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 import net.minecraft.server.management.LowerStringMap;
+
+import java.util.*;
 
 public class ServersideAttributeMap extends BaseAttributeMap
 {

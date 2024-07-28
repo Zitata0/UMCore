@@ -3,8 +3,6 @@ package net.minecraft.command.server;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,6 +10,9 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public abstract class CommandBlockLogic implements ICommandSender
 {

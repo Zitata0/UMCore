@@ -1,10 +1,9 @@
 package net.minecraftforge.event.terraingen;
 
-import java.util.Random;
-
 import cpw.mods.fml.common.eventhandler.Event;
-import cpw.mods.fml.common.eventhandler.Event.HasResult;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 /**DecorateBiomeEvent is fired when a BiomeDecorator is created.
  * <br>

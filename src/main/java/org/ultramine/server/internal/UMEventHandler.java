@@ -1,23 +1,7 @@
 package org.ultramine.server.internal;
 
-import net.minecraft.util.DamageSource;
-import org.ultramine.commands.basic.GenWorldCommand;
-import org.ultramine.core.service.InjectService;
-import org.ultramine.server.ConfigurationHandler;
-import org.ultramine.server.Teleporter;
-import org.ultramine.server.UltramineServerConfig.ToolsConf.AutoBroacastConf;
-import org.ultramine.server.UltramineServerConfig.ToolsConf.AutoDebugInfoConf;
-import org.ultramine.server.chunk.ChunkProfiler;
-import org.ultramine.server.data.player.PlayerCoreData;
-import org.ultramine.server.event.ForgeModIdMappingEvent;
-import org.ultramine.server.event.PlayerDeathEvent;
-import org.ultramine.server.util.BasicTypeFormatter;
-import org.ultramine.server.util.BasicTypeParser;
-import org.ultramine.server.util.WarpLocation;
-
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.functions.GenericIterableFactory;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
@@ -25,21 +9,24 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.ChatComponentStyle;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkPosition;
-
-import static net.minecraft.util.EnumChatFormatting.*;
-
-import net.minecraftforge.event.CommandEvent;
-import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import org.ultramine.commands.basic.GenWorldCommand;
+import org.ultramine.server.ConfigurationHandler;
+import org.ultramine.server.Teleporter;
+import org.ultramine.server.UltramineServerConfig.ToolsConf.AutoBroacastConf;
+import org.ultramine.server.UltramineServerConfig.ToolsConf.AutoDebugInfoConf;
+import org.ultramine.server.chunk.ChunkProfiler;
+import org.ultramine.server.event.ForgeModIdMappingEvent;
+import org.ultramine.server.event.PlayerDeathEvent;
+import org.ultramine.server.util.WarpLocation;
+
+import static net.minecraft.util.EnumChatFormatting.*;
 
 public class UMEventHandler
 {

@@ -1,10 +1,11 @@
 package net.minecraft.network.status.client;
 
-import java.io.IOException;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.status.INetHandlerStatusServer;
+
+import java.io.IOException;
 
 public class C00PacketServerQuery extends Packet
 {

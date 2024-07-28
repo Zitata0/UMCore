@@ -2,9 +2,10 @@ package net.minecraft.client.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
+
+import java.util.List;
 
 @SideOnly(Side.CLIENT)
 public class GuiResourcePackAvailable extends GuiResourcePackList

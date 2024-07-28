@@ -1,29 +1,11 @@
 package org.ultramine.server.data;
 
-import gnu.trove.set.TIntSet;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.function.Consumer;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.ultramine.server.ConfigurationHandler;
-import org.ultramine.server.data.player.PlayerData;
-import org.ultramine.server.data.player.PlayerDataExtension;
-import org.ultramine.server.data.player.PlayerDataExtensionInfo;
-import org.ultramine.server.util.TwoStepsExecutor;
-import org.ultramine.server.util.WarpLocation;
-
 import com.mojang.authlib.GameProfile;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.FMLNetworkEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import gnu.trove.set.TIntSet;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetHandlerPlayServer;
@@ -35,6 +17,16 @@ import net.minecraft.world.storage.SaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.ForgeEventFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.ultramine.server.data.player.PlayerData;
+import org.ultramine.server.data.player.PlayerDataExtension;
+import org.ultramine.server.data.player.PlayerDataExtensionInfo;
+import org.ultramine.server.util.TwoStepsExecutor;
+import org.ultramine.server.util.WarpLocation;
+
+import java.util.*;
+import java.util.function.Consumer;
 
 public class ServerDataLoader
 {

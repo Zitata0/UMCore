@@ -1,9 +1,10 @@
 package net.minecraft.command;
 
-import java.util.List;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.server.MinecraftServer;
+
+import java.util.List;
 
 public class CommandClearInventory extends CommandBase
 {

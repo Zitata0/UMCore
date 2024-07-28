@@ -1,10 +1,10 @@
 package cpw.mods.fml.common.gameevent;
 
+import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.common.eventhandler.Event;
 
 public class PlayerEvent extends Event {
 	public final EntityPlayer player;

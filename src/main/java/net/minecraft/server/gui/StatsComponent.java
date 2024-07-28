@@ -2,15 +2,13 @@ package net.minecraft.server.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import net.minecraft.server.MinecraftServer;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
-import javax.swing.JComponent;
-import javax.swing.Timer;
-import net.minecraft.server.MinecraftServer;
 
 @SideOnly(Side.SERVER)
 public class StatsComponent extends JComponent

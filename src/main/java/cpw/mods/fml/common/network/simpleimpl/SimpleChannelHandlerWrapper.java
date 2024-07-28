@@ -1,11 +1,6 @@
 package cpw.mods.fml.common.network.simpleimpl;
 
-import org.apache.logging.log4j.Level;
-
-import net.minecraft.network.INetHandler;
-
 import com.google.common.base.Preconditions;
-
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -13,6 +8,8 @@ import cpw.mods.fml.relauncher.Side;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import net.minecraft.network.INetHandler;
+import org.apache.logging.log4j.Level;
 
 public class SimpleChannelHandlerWrapper<REQ extends IMessage, REPLY extends IMessage> extends SimpleChannelInboundHandler<REQ> {
 	private final IMessageHandler<? super REQ, ? extends REPLY> messageHandler;

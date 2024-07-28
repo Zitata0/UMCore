@@ -2,10 +2,11 @@ package net.minecraft.server.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Vector;
-import javax.swing.JList;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+
+import javax.swing.*;
+import java.util.Vector;
 
 @SideOnly(Side.SERVER)
 public class PlayerListComponent extends JList implements IUpdatePlayerListBox

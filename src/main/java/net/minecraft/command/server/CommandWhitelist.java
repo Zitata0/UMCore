@@ -1,7 +1,6 @@
 package net.minecraft.command.server;
 
 import com.mojang.authlib.GameProfile;
-import java.util.List;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -9,6 +8,8 @@ import net.minecraft.command.WrongUsageException;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
+
+import java.util.List;
 
 public class CommandWhitelist extends CommandBase
 {

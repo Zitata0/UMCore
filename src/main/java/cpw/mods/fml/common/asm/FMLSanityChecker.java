@@ -12,21 +12,8 @@
 
 package cpw.mods.fml.common.asm;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URLDecoder;
-import java.security.CodeSource;
-import java.security.cert.Certificate;
-import java.util.Map;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import org.apache.logging.log4j.Level;
-
-import net.minecraft.launchwrapper.LaunchClassLoader;
-
 import com.google.common.base.Charsets;
 import com.google.common.io.ByteStreams;
-
 import cpw.mods.fml.common.CertificateHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
@@ -35,6 +22,17 @@ import cpw.mods.fml.relauncher.FMLLaunchHandler;
 import cpw.mods.fml.relauncher.FMLRelaunchLog;
 import cpw.mods.fml.relauncher.IFMLCallHook;
 import cpw.mods.fml.relauncher.Side;
+import net.minecraft.launchwrapper.LaunchClassLoader;
+import org.apache.logging.log4j.Level;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.security.CodeSource;
+import java.security.cert.Certificate;
+import java.util.Map;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 public class FMLSanityChecker implements IFMLCallHook
 {

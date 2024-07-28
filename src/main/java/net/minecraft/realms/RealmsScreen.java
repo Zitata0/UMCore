@@ -2,7 +2,6 @@ package net.minecraft.realms;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.gui.Gui;
@@ -10,6 +9,8 @@ import net.minecraft.client.gui.GuiScreenRealmsProxy;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+
+import java.util.List;
 
 @SideOnly(Side.CLIENT)
 public class RealmsScreen

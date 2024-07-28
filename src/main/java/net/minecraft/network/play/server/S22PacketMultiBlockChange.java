@@ -2,9 +2,6 @@ package net.minecraft.network.play.server;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
@@ -14,6 +11,10 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.chunk.Chunk;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 
 public class S22PacketMultiBlockChange extends Packet
 {

@@ -2,13 +2,10 @@ package net.minecraft.client.settings;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.IntHashMap;
+
+import java.util.*;
 
 @SideOnly(Side.CLIENT)
 public class KeyBinding implements Comparable

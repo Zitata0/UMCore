@@ -3,8 +3,7 @@ package net.minecraft.util;
 import com.google.common.base.Function;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Iterator;
 import java.util.List;
 

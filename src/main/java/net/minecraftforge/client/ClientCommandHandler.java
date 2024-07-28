@@ -1,19 +1,16 @@
 package net.minecraftforge.client;
 
-import java.util.List;
-
+import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiChat;
-import net.minecraft.command.CommandException;
-import net.minecraft.command.CommandHandler;
-import net.minecraft.command.ICommand;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.command.WrongUsageException;
+import net.minecraft.command.*;
 import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CommandEvent;
-import cpw.mods.fml.client.FMLClientHandler;
-import net.minecraft.util.EnumChatFormatting;
+
+import java.util.List;
+
 import static net.minecraft.util.EnumChatFormatting.*;
 
 /**

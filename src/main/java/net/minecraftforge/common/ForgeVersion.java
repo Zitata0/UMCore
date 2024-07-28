@@ -4,17 +4,17 @@
  */
 
 package net.minecraftforge.common;
-import static net.minecraftforge.common.ForgeVersion.Status.*;
+
+import com.google.common.io.ByteStreams;
+import com.google.gson.Gson;
+import cpw.mods.fml.common.versioning.ArtifactVersion;
+import cpw.mods.fml.common.versioning.DefaultArtifactVersion;
 
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Map;
 
-import com.google.common.io.ByteStreams;
-import com.google.gson.Gson;
-
-import cpw.mods.fml.common.versioning.ArtifactVersion;
-import cpw.mods.fml.common.versioning.DefaultArtifactVersion;
+import static net.minecraftforge.common.ForgeVersion.Status.*;
 
 public class ForgeVersion
 {

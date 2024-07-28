@@ -2,11 +2,10 @@ package org.ultramine.server;
 
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin.SortingIndex;
+import net.minecraft.launchwrapper.LaunchClassLoader;
 
 import java.io.File;
 import java.util.Map;
-
-import net.minecraft.launchwrapper.LaunchClassLoader;
 
 @SortingIndex(Integer.MAX_VALUE) //UMTransformerCollection must be always the last
 public class UltraminePluginNew implements IFMLLoadingPlugin

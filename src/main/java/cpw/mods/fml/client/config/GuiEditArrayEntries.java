@@ -12,24 +12,22 @@
 
 package cpw.mods.fml.client.config;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import cpw.mods.fml.client.config.GuiConfigEntries.ArrayEntry;
+import cpw.mods.fml.common.FMLLog;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiListExtended;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.EnumChatFormatting;
-
 import org.lwjgl.input.Keyboard;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static cpw.mods.fml.client.config.GuiUtils.INVALID;
 import static cpw.mods.fml.client.config.GuiUtils.VALID;
-
-import cpw.mods.fml.client.config.GuiConfigEntries.ArrayEntry;
-import cpw.mods.fml.common.FMLLog;
 
 /**
  * This class implements the scrolling list functionality of the GuiEditList screen. It also provides all the default controls

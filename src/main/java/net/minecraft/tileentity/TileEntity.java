@@ -1,13 +1,9 @@
 package net.minecraft.tileentity;
 
+import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.Callable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.crash.CrashReportCategory;
@@ -18,13 +14,14 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
-
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ultramine.server.internal.UMHooks;
 
-import com.mojang.authlib.GameProfile;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Callable;
 
 public class TileEntity
 {

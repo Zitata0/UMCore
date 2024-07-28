@@ -1,11 +1,8 @@
 package org.ultramine.server;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Random;
-
+import cpw.mods.fml.relauncher.FMLLaunchHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.server.MinecraftServer;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -13,11 +10,13 @@ import org.apache.logging.log4j.Logger;
 import org.ultramine.server.util.AsyncIOUtils;
 import org.ultramine.server.util.Resources;
 import org.ultramine.server.util.YamlConfigProvider;
-
-import cpw.mods.fml.relauncher.FMLLaunchHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import org.ultramine.server.world.WorldDescriptor;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Random;
 
 @SideOnly(Side.SERVER)
 public class ConfigurationHandler

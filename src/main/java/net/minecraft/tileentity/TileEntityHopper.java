@@ -1,6 +1,5 @@
 package net.minecraft.tileentity;
 
-import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockHopper;
@@ -17,6 +16,8 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Facing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class TileEntityHopper extends TileEntity implements IHopper
 {

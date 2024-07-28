@@ -2,8 +2,8 @@ package org.ultramine.server.economy;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
-import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.holdings.MemoryHoldings;
 import org.ultramine.server.data.player.PlayerData;
 import org.ultramine.server.util.GlobalExecutors;

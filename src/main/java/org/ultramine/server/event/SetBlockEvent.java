@@ -1,9 +1,9 @@
 package org.ultramine.server.event;
 
-import net.minecraft.block.Block;
-import net.minecraft.world.WorldServer;
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import cpw.mods.fml.common.eventhandler.Event;
+import net.minecraft.block.Block;
+import net.minecraft.world.WorldServer;
 
 @Cancelable
 public class SetBlockEvent extends Event

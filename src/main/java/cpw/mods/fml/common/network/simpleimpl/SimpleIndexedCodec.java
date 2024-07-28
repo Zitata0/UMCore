@@ -1,8 +1,8 @@
 package cpw.mods.fml.common.network.simpleimpl;
 
+import cpw.mods.fml.common.network.FMLIndexedMessageToMessageCodec;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import cpw.mods.fml.common.network.FMLIndexedMessageToMessageCodec;
 
 public class SimpleIndexedCodec extends FMLIndexedMessageToMessageCodec<IMessage> {
 	@Override

@@ -2,9 +2,10 @@ package net.minecraft.realms;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Hashtable;
+
 import javax.naming.directory.Attributes;
 import javax.naming.directory.InitialDirContext;
+import java.util.Hashtable;
 
 @SideOnly(Side.CLIENT)
 public class RealmsServerAddress

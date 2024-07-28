@@ -1,15 +1,13 @@
 package org.ultramine.server;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-
-import org.ultramine.server.util.WarpLocation;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
+import org.ultramine.server.util.WarpLocation;
+
+import java.util.LinkedList;
 
 public class Teleporter
 {

@@ -2,9 +2,10 @@ package net.minecraft.client.renderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.nio.FloatBuffer;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
+
+import java.nio.FloatBuffer;
 
 @SideOnly(Side.CLIENT)
 public class RenderHelper

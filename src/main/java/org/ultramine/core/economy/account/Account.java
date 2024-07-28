@@ -1,9 +1,9 @@
 package org.ultramine.core.economy.account;
 
 import org.ultramine.core.economy.Currency;
-import org.ultramine.core.economy.holdings.Holdings;
 import org.ultramine.core.economy.exception.CurrencyNotFoundException;
 import org.ultramine.core.economy.exception.CurrencyNotSupportedException;
+import org.ultramine.core.economy.holdings.Holdings;
 
 import javax.annotation.Nonnull;
 import java.util.Collection;

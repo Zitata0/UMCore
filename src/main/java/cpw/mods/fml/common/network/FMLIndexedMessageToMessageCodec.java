@@ -1,5 +1,7 @@
 package cpw.mods.fml.common.network;
 
+import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import gnu.trove.map.hash.TByteObjectHashMap;
 import gnu.trove.map.hash.TObjectByteHashMap;
 import io.netty.buffer.ByteBuf;
@@ -8,11 +10,10 @@ import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageCodec;
 import io.netty.util.AttributeKey;
+import org.apache.logging.log4j.Level;
+
 import java.lang.ref.WeakReference;
 import java.util.List;
-import org.apache.logging.log4j.Level;
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 
 @Sharable
 public abstract class FMLIndexedMessageToMessageCodec<A> extends MessageToMessageCodec<FMLProxyPacket, A> {

@@ -1,9 +1,9 @@
 package org.ultramine.server.event;
 
-import net.minecraft.entity.EntityHanging;
-import net.minecraft.util.DamageSource;
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import cpw.mods.fml.common.eventhandler.Event;
+import net.minecraft.entity.EntityHanging;
+import net.minecraft.util.DamageSource;
 
 @Cancelable
 public class HangingEvent extends Event

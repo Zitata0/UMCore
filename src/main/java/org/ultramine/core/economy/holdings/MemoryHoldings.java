@@ -1,7 +1,7 @@
 package org.ultramine.core.economy.holdings;
 
-import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.exception.InsufficientFundsException;
 import org.ultramine.core.economy.exception.NegativeAmountException;
 

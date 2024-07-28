@@ -1,6 +1,5 @@
 package net.minecraft.entity;
 
-import java.util.UUID;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -13,6 +12,8 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
+
+import java.util.UUID;
 
 public abstract class EntityCreature extends EntityLiving
 {

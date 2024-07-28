@@ -2,9 +2,6 @@ package net.minecraft.client.gui.inventory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
@@ -22,6 +19,10 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 @SideOnly(Side.CLIENT)
 public abstract class GuiContainer extends GuiScreen

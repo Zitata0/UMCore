@@ -1,40 +1,13 @@
 package net.minecraft.command;
 
-import java.util.List;
-
-import net.minecraft.command.server.CommandAchievement;
-import net.minecraft.command.server.CommandBanIp;
-import net.minecraft.command.server.CommandBanPlayer;
-import net.minecraft.command.server.CommandBlockLogic;
-import net.minecraft.command.server.CommandBroadcast;
-import net.minecraft.command.server.CommandDeOp;
-import net.minecraft.command.server.CommandEmote;
-import net.minecraft.command.server.CommandListBans;
-import net.minecraft.command.server.CommandListPlayers;
-import net.minecraft.command.server.CommandMessage;
-import net.minecraft.command.server.CommandMessageRaw;
-import net.minecraft.command.server.CommandNetstat;
-import net.minecraft.command.server.CommandOp;
-import net.minecraft.command.server.CommandPardonIp;
-import net.minecraft.command.server.CommandPardonPlayer;
-import net.minecraft.command.server.CommandPublishLocalServer;
-import net.minecraft.command.server.CommandSaveAll;
-import net.minecraft.command.server.CommandSaveOff;
-import net.minecraft.command.server.CommandSaveOn;
-import net.minecraft.command.server.CommandScoreboard;
-import net.minecraft.command.server.CommandSetBlock;
-import net.minecraft.command.server.CommandSetDefaultSpawnpoint;
-import net.minecraft.command.server.CommandStop;
-import net.minecraft.command.server.CommandSummon;
-import net.minecraft.command.server.CommandTeleport;
-import net.minecraft.command.server.CommandTestFor;
-import net.minecraft.command.server.CommandTestForBlock;
-import net.minecraft.command.server.CommandWhitelist;
+import net.minecraft.command.server.*;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.rcon.RConConsoleSource;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
+
+import java.util.List;
 
 public class ServerCommandManager extends CommandHandler implements IAdminCommand
 {

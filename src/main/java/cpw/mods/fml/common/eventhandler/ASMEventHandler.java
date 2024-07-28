@@ -1,17 +1,16 @@
 package cpw.mods.fml.common.eventhandler;
 
-import static org.objectweb.asm.Opcodes.*;
-
-import java.lang.reflect.Method;
-import java.util.HashMap;
-
+import com.google.common.collect.Maps;
+import cpw.mods.fml.common.ModContainer;
 import org.apache.logging.log4j.ThreadContext;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
 
-import com.google.common.collect.Maps;
-import cpw.mods.fml.common.ModContainer;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+
+import static org.objectweb.asm.Opcodes.*;
 
 
 public class ASMEventHandler implements IEventListener

@@ -2,8 +2,9 @@ package net.minecraft.client.renderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Comparator;
 import net.minecraft.entity.EntityLivingBase;
+
+import java.util.Comparator;
 
 @SideOnly(Side.CLIENT)
 public class RenderSorter implements Comparator

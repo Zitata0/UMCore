@@ -2,14 +2,15 @@ package net.minecraft.client.renderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Collection;
-import java.util.Iterator;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.inventory.Container;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import org.lwjgl.opengl.GL11;
+
+import java.util.Collection;
+import java.util.Iterator;
 
 @SideOnly(Side.CLIENT)
 public abstract class InventoryEffectRenderer extends GuiContainer

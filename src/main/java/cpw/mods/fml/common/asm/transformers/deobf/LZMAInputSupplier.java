@@ -12,12 +12,11 @@
 
 package cpw.mods.fml.common.asm.transformers.deobf;
 
+import LZMA.LzmaInputStream;
+import com.google.common.io.ByteSource;
+
 import java.io.IOException;
 import java.io.InputStream;
-
-import LZMA.LzmaInputStream;
-
-import com.google.common.io.ByteSource;
 
 public class LZMAInputSupplier extends ByteSource {
 	private InputStream compressedData;

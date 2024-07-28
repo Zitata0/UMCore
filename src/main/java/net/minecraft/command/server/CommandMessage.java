@@ -1,7 +1,5 @@
 package net.minecraft.command.server;
 
-import java.util.Arrays;
-import java.util.List;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.PlayerNotFoundException;
@@ -12,6 +10,9 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class CommandMessage extends CommandBase
 {
