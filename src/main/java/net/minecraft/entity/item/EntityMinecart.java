@@ -2,9 +2,6 @@ package net.minecraft.entity.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.util.List;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.material.Material;
@@ -29,6 +26,8 @@ import net.minecraftforge.common.IMinecartCollisionHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.minecart.MinecartCollisionEvent;
 import net.minecraftforge.event.entity.minecart.MinecartUpdateEvent;
+
+import java.util.List;
 
 public abstract class EntityMinecart extends Entity
 {

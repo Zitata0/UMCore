@@ -12,26 +12,8 @@
 
 package cpw.mods.fml.common.network;
 
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.MessageToMessageCodec;
-import io.netty.util.AttributeKey;
-
-import java.util.EnumMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import org.apache.logging.log4j.Level;
-
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.Container;
-import net.minecraft.network.INetHandler;
-import net.minecraft.world.World;
-
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.ModContainer;
@@ -42,6 +24,21 @@ import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import cpw.mods.fml.common.network.internal.NetworkModHolder;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.relauncher.Side;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.MessageToMessageCodec;
+import io.netty.util.AttributeKey;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.inventory.Container;
+import net.minecraft.network.INetHandler;
+import net.minecraft.world.World;
+import org.apache.logging.log4j.Level;
+
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 /**
  * @author cpw

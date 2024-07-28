@@ -1,6 +1,5 @@
 package org.ultramine.server;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +9,6 @@ public class UltramineServerConfig
 	public ListenConf listen = new ListenConf();
 	public SettingsConf settings = new SettingsConf();
 	public ToolsConf tools = new ToolsConf();
-	public Map<String, DatabaseConf> databases = new HashMap<String, DatabaseConf>();
 	public VanillaConf vanilla = new VanillaConf();
 
 	public static class ListenConf
@@ -45,11 +43,8 @@ public class UltramineServerConfig
 		public AuthorizationConf authorization = new AuthorizationConf();
 		public PlayerConf player = new PlayerConf();
 		public OtherConf other = new OtherConf();
-		public SpawnLocationsConf spawnLocations = new SpawnLocationsConf();
-		public TeleportationConf teleportation = new TeleportationConf();
 		public MessagesConf messages = new MessagesConf();
 		public WatchdogThreadConf	watchdogThread = new WatchdogThreadConf();
-		public SQLServerStorageConf inSQLServerStorage = new SQLServerStorageConf();
 		public SecurityConf security = new SecurityConf();
 
 		public static class AuthorizationConf
@@ -76,21 +71,6 @@ public class UltramineServerConfig
 			public boolean recipeCacheEnabled = true;
 		}
 
-		public static class SpawnLocationsConf
-		{
-			public String firstSpawn = "spawn";
-			public String deathSpawn = "spawn";
-			public boolean respawnOnBed = true;
-		}
-
-		public static class TeleportationConf
-		{
-			public int cooldown = 60;
-			public int delay = 5;
-			public boolean interWorldHome = true;
-			public boolean interWorldWarp = true;
-		}
-
 		public static class MessagesConf
 		{
 			public boolean announcePlayerAchievements = true;
@@ -101,13 +81,6 @@ public class UltramineServerConfig
 		{
 			public int timeout = 120;
 			public boolean restart = true;
-		}
-
-		public static class SQLServerStorageConf
-		{
-			public boolean enabled = false;
-			public String database = "global";
-			public String tablePrefix = "mc_";
 		}
 		
 		public static class SecurityConf
@@ -122,7 +95,6 @@ public class UltramineServerConfig
 		public AutoBroacastConf autobroadcast = new AutoBroacastConf();
 		public AutoDebugInfoConf autoDebugInfo = new AutoDebugInfoConf();
 		public AutoBackupConf autobackup = new AutoBackupConf();
-		public EconomyConf economy = new EconomyConf();
 		
 		public static class AutoBroacastConf
 		{
@@ -147,33 +119,7 @@ public class UltramineServerConfig
 			public List<String> worlds = null;
 			public boolean notifyPlayers = true;
 		}
-		
-		public static class WarpProtectionEntry
-		{
-			public String name;
-			public int radius;
-			public boolean changeBlocks;
-			public boolean useItems;
-			public boolean userBlocks;
-			public boolean pvp;
-			public boolean mobSpawn;
-			public boolean mobDamage;
-		}
-		
-		public static class EconomyConf
-		{
-			public double startBalance = 30;
-		}
 	}
-
-	public static class DatabaseConf
-	{
-		public String url; //jdbc:mysql://localhost:3306/databasename
-		public String username;
-		public String password;
-		public int maxConnections;
-	}
-
 	public static class VanillaConf
 	{
 		public Map<String, Object> unresolved = new LinkedHashMap<String, Object>();

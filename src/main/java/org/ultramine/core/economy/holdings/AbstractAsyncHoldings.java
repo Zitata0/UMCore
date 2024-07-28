@@ -1,7 +1,7 @@
 package org.ultramine.core.economy.holdings;
 
-import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.account.Account;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

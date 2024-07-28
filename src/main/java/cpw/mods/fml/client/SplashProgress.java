@@ -1,28 +1,8 @@
 package cpw.mods.fml.client;
 
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL12.*;
-
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.lang.Thread.UncaughtExceptionHandler;
-import java.nio.IntBuffer;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
-import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
-import javax.imageio.stream.ImageInputStream;
-
+import cpw.mods.fml.common.*;
+import cpw.mods.fml.common.ProgressManager.ProgressBar;
+import cpw.mods.fml.common.asm.FMLSanityChecker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.texture.TextureManager;
@@ -32,7 +12,6 @@ import net.minecraft.client.resources.IResourcePack;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraft.util.ResourceLocation;
-
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.Level;
 import org.lwjgl.BufferUtils;
@@ -43,14 +22,22 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.SharedDrawable;
 import org.lwjgl.util.glu.GLU;
 
-import cpw.mods.fml.common.EnhancedRuntimeException;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.ICrashCallable;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.ProgressManager;
-import cpw.mods.fml.common.ProgressManager.ProgressBar;
-import cpw.mods.fml.common.asm.FMLSanityChecker;
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.ImageInputStream;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.lang.Thread.UncaughtExceptionHandler;
+import java.nio.IntBuffer;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL12.GL_BGRA;
+import static org.lwjgl.opengl.GL12.GL_UNSIGNED_INT_8_8_8_8_REV;
 
 /**
  * @deprecated not a stable API, will break, don't use this yet

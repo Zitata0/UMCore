@@ -9,8 +9,8 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import net.minecraftforge.common.util.ForgeDirection;
+
 import static net.minecraftforge.common.util.ForgeDirection.*;
 
 public class BlockLever extends Block

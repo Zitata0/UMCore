@@ -1,9 +1,9 @@
 package cpw.mods.fml.client;
 
+import cpw.mods.fml.common.StartupQuery;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiOptionButton;
 import net.minecraft.client.resources.I18n;
-import cpw.mods.fml.common.StartupQuery;
 
 public class GuiConfirmation extends GuiNotification
 {

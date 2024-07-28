@@ -1,6 +1,5 @@
 package net.minecraft.command.server;
 
-import java.util.List;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
@@ -14,6 +13,8 @@ import net.minecraft.nbt.NBTException;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class CommandSummon extends CommandBase
 {

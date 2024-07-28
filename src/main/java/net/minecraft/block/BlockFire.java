@@ -1,11 +1,8 @@
 package net.minecraft.block;
 
+import com.google.common.collect.Maps;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.IdentityHashMap;
-import java.util.Map.Entry;
-import java.util.Random;
-import com.google.common.collect.Maps;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,8 +11,12 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldProviderEnd;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.IdentityHashMap;
+import java.util.Map.Entry;
+import java.util.Random;
+
 import static net.minecraftforge.common.util.ForgeDirection.*;
 
 public class BlockFire extends Block

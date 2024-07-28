@@ -2,18 +2,6 @@ package net.minecraft.world.chunk;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.concurrent.Callable;
-
 import gnu.trove.iterator.TByteIterator;
 import gnu.trove.set.TByteSet;
 import gnu.trove.set.hash.TByteHashSet;
@@ -30,11 +18,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ReportedException;
-import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.ChunkPosition;
-import net.minecraft.world.EnumSkyBlock;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
+import net.minecraft.world.*;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
@@ -44,7 +28,6 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.openhft.koloboke.collect.map.ShortObjMap;
 import net.openhft.koloboke.collect.map.hash.HashShortObjMaps;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ultramine.server.EntityType;
@@ -52,10 +35,13 @@ import org.ultramine.server.chunk.ChunkBindState;
 import org.ultramine.server.chunk.ChunkHash;
 import org.ultramine.server.chunk.IChunkDependency;
 import org.ultramine.server.chunk.PendingBlockUpdate;
-import org.ultramine.server.internal.LambdaHolder;
-import org.ultramine.server.util.WeakObjectPool;
 import org.ultramine.server.event.WorldUpdateObject;
 import org.ultramine.server.event.WorldUpdateObjectType;
+import org.ultramine.server.internal.LambdaHolder;
+import org.ultramine.server.util.WeakObjectPool;
+
+import java.util.*;
+import java.util.concurrent.Callable;
 
 public class Chunk implements IChunkDependency
 {

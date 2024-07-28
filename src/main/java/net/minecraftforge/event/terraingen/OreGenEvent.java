@@ -1,11 +1,10 @@
 package net.minecraftforge.event.terraingen;
 
-import java.util.Random;
-
 import cpw.mods.fml.common.eventhandler.Event;
-import cpw.mods.fml.common.eventhandler.Event.HasResult;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import java.util.Random;
 
 /**
  * OreGenEvent is fired when an event involving ore generation occurs.<br>

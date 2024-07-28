@@ -1,9 +1,8 @@
 package net.minecraftforge.event.entity.player;
 
+import cpw.mods.fml.common.eventhandler.Cancelable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.stats.Achievement;
-import cpw.mods.fml.common.eventhandler.Cancelable;
-import cpw.mods.fml.common.eventhandler.Event;
 
 /**
  * When the player receives an achievement. If canceled the player will not receive anything.

@@ -1,5 +1,6 @@
 package org.ultramine.server.chunk;
 
+import com.google.common.collect.Queues;
 import gnu.trove.TCollections;
 import gnu.trove.iterator.TIntIterator;
 import gnu.trove.map.TIntIntMap;
@@ -8,24 +9,6 @@ import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.ultramine.core.service.InjectService;
-import org.ultramine.server.WorldConstants;
-import org.ultramine.server.util.BlockFace;
-import org.ultramine.server.util.ChunkCoordComparator;
-import org.ultramine.server.util.TIntArrayListImpl;
-
-import com.google.common.collect.Queues;
-
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S21PacketChunkData;
@@ -39,6 +22,20 @@ import net.minecraftforge.event.world.ChunkWatchEvent;
 import net.openhft.koloboke.collect.IntCursor;
 import net.openhft.koloboke.collect.set.IntSet;
 import net.openhft.koloboke.collect.set.hash.HashIntSets;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.ultramine.core.service.InjectService;
+import org.ultramine.server.WorldConstants;
+import org.ultramine.server.util.BlockFace;
+import org.ultramine.server.util.ChunkCoordComparator;
+import org.ultramine.server.util.TIntArrayListImpl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ChunkSendManager
 {

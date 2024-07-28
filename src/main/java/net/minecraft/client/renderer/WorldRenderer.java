@@ -2,9 +2,6 @@ package net.minecraft.client.renderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -21,6 +18,10 @@ import net.minecraft.world.ChunkCache;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import org.lwjgl.opengl.GL11;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 @SideOnly(Side.CLIENT)
 public class WorldRenderer

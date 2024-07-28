@@ -2,10 +2,10 @@ package net.minecraftforge.client.event;
 
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import cpw.mods.fml.common.eventhandler.Event;
+import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.client.renderer.RenderGlobal;
 
 @Cancelable
 public class DrawBlockHighlightEvent extends Event

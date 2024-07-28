@@ -1,10 +1,11 @@
 package net.minecraft.block;
 
-import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBigMushroom;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.Random;
 
 public class BlockMushroom extends BlockBush implements IGrowable
 {

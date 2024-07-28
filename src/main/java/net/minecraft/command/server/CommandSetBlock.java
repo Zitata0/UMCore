@@ -1,6 +1,5 @@
 package net.minecraft.command.server;
 
-import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -13,6 +12,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class CommandSetBlock extends CommandBase
 {

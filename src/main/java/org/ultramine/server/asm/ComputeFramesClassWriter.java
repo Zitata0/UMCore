@@ -1,18 +1,17 @@
 package org.ultramine.server.asm;
 
+import cpw.mods.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
+import cpw.mods.fml.common.patcher.ClassPatchManager;
+import net.minecraft.launchwrapper.LaunchClassLoader;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Opcodes;
+import org.ultramine.server.UltraminePluginNew;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.Opcodes;
-import org.ultramine.server.UltraminePlugin;
-
-import cpw.mods.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
-import cpw.mods.fml.common.patcher.ClassPatchManager;
-import net.minecraft.launchwrapper.LaunchClassLoader;
 
 public class ComputeFramesClassWriter extends ClassWriter
 {
@@ -66,7 +65,7 @@ public class ComputeFramesClassWriter extends ClassWriter
 	{
 		try
 		{
-			byte[] classBytes = ClassPatchManager.INSTANCE.getPatchedResource(UltraminePlugin.isObfEnv ? FMLDeobfuscatingRemapper.INSTANCE.unmap(name) : name,
+			byte[] classBytes = ClassPatchManager.INSTANCE.getPatchedResource(UltraminePluginNew.isObfEnv ? FMLDeobfuscatingRemapper.INSTANCE.unmap(name) : name,
 					FMLDeobfuscatingRemapper.INSTANCE.map(name), CLASSLOADER);
 			if(classBytes != null)
 			{

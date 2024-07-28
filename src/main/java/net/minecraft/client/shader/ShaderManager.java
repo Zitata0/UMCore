@@ -9,10 +9,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.io.InputStream;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.texture.ITextureObject;
 import net.minecraft.client.resources.IResourceManager;
@@ -23,9 +19,14 @@ import net.minecraft.util.ResourceLocation;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.ARBMultitexture;
+import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
+
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class ShaderManager

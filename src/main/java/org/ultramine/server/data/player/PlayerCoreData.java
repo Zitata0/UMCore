@@ -1,24 +1,20 @@
 package org.ultramine.server.data.player;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.account.PlayerAccount;
 import org.ultramine.core.economy.service.Economy;
 import org.ultramine.core.economy.service.EconomyRegistry;
-import org.ultramine.core.economy.holdings.Holdings;
-import org.ultramine.core.economy.account.PlayerAccount;
 import org.ultramine.core.service.InjectService;
 import org.ultramine.server.Teleporter;
-import org.ultramine.server.economy.CurrencyImpl;
 import org.ultramine.server.economy.UMIntegratedPlayerHoldings;
 import org.ultramine.server.util.WarpLocation;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-
 import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PlayerCoreData extends PlayerDataExtension
 {
@@ -286,24 +282,12 @@ public class PlayerCoreData extends PlayerDataExtension
 
 		public void readFromNBT(NBTTagCompound nbt)
 		{
-			PlayerAccount realAccount = economy.getPlayerAccount(data.getProfile());
-
 			for(Object code : nbt.func_150296_c())
 			{
 				NBTBase b = nbt.getTag((String)code);
 				if(!(b instanceof NBTTagCompound))
 					continue;
-				Currency currency = economyRegistry.getCurrencyNullable((String)code);
-				if(currency != null && currency instanceof CurrencyImpl)
-				{
-					UMIntegratedPlayerHoldings holdings = new UMIntegratedPlayerHoldings(realAccount, currency, data);
-					holdings.readFromNBT((NBTTagCompound)b);
-					holdingsMap.put(currency.getId(), holdings);
-				}
-				else
-				{
-					holdingsMap.put((String)code, nbt.getTag((String)code));
-				}
+				holdingsMap.put((String)code, nbt.getTag((String)code));
 			}
 		}
 	}

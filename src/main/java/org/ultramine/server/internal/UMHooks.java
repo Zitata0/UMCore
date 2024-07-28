@@ -1,17 +1,6 @@
 package org.ultramine.server.internal;
 
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.zip.Deflater;
-import java.util.zip.GZIPOutputStream;
-
+import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.entity.Entity;
@@ -23,7 +12,6 @@ import net.minecraft.nbt.NBTOutputStream;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
-
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.world.WorldServer;
@@ -40,9 +28,15 @@ import org.ultramine.server.chunk.ChunkGenerationQueue;
 import org.ultramine.server.chunk.ChunkSnapshot;
 import org.ultramine.server.event.WorldEventProxy;
 import org.ultramine.server.event.WorldUpdateObject;
-
-import com.mojang.authlib.GameProfile;
 import org.ultramine.server.util.GlobalExecutors;
+
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.zip.Deflater;
+import java.util.zip.GZIPOutputStream;
 
 public class UMHooks
 {

@@ -1,9 +1,9 @@
 package net.minecraftforge.common;
 
+import net.minecraft.util.WeightedRandom;
+
 import java.util.ArrayList;
 import java.util.Random;
-
-import net.minecraft.util.WeightedRandom;
 
 public class DungeonHooks
 {

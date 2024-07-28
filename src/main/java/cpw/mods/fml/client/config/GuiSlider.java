@@ -1,7 +1,6 @@
 package cpw.mods.fml.client.config;
 
 import net.minecraft.client.Minecraft;
-
 import org.lwjgl.opengl.GL11;
 
 /**

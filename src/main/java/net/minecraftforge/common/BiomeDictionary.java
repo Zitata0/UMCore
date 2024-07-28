@@ -1,12 +1,16 @@
 package net.minecraftforge.common;
 
-import java.util.*;
-
 import cpw.mods.fml.common.FMLLog;
 import net.minecraft.init.Blocks;
-import net.minecraft.world.biome.*;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.terraingen.DeferredBiomeDecorator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.List;
+
 import static net.minecraft.world.biome.BiomeGenBase.*;
 import static net.minecraftforge.common.BiomeDictionary.Type.*;
 

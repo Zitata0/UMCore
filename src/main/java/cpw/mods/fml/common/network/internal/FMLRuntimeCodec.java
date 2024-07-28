@@ -1,12 +1,12 @@
 package cpw.mods.fml.common.network.internal;
 
 import com.google.common.base.Splitter;
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerContext;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.FMLIndexedMessageToMessageCodec;
 import cpw.mods.fml.common.network.FMLNetworkException;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
 
 public class FMLRuntimeCodec extends FMLIndexedMessageToMessageCodec<FMLMessage> {
 	public FMLRuntimeCodec()

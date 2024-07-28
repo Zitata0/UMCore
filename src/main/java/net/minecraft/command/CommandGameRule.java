@@ -1,9 +1,10 @@
 package net.minecraft.command;
 
-import java.util.List;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.GameRules;
+
+import java.util.List;
 
 public class CommandGameRule extends CommandBase
 {

@@ -1,15 +1,13 @@
 package org.ultramine.server.mobspawn;
 
+import cpw.mods.fml.common.functions.GenericIterableFactory;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.Chunk;
-
 import org.ultramine.server.WorldsConfig.WorldConfig;
-
-import cpw.mods.fml.common.functions.GenericIterableFactory;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.SERVER)
 public class MobSpawnerAmbient extends MobSpawner

@@ -3,7 +3,6 @@ package net.minecraft.client.renderer.entity;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Map;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.texture.LayeredTexture;
@@ -12,6 +11,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+
+import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class RenderHorse extends RenderLiving

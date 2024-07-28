@@ -1,8 +1,9 @@
 package net.minecraft.enchantment;
 
-import java.util.Random;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+
+import java.util.Random;
 
 public class EnchantmentDurability extends Enchantment
 {

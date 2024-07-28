@@ -1,15 +1,8 @@
 package net.minecraft.entity.boss;
 
-import java.util.Iterator;
-import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEndPortal;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.IEntityMultiPart;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.*;
 import net.minecraft.entity.item.EntityEnderCrystal;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.IMob;
@@ -21,6 +14,9 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Iterator;
+import java.util.List;
 
 public class EntityDragon extends EntityLiving implements IBossDisplayData, IEntityMultiPart, IMob
 {

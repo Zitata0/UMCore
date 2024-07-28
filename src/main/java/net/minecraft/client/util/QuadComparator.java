@@ -2,6 +2,7 @@ package net.minecraft.client.util;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Comparator;
 
 @SideOnly(Side.CLIENT)

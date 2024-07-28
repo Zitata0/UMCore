@@ -6,9 +6,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.lang.reflect.Type;
 import net.minecraft.util.JsonUtils;
 import org.apache.commons.lang3.Validate;
+
+import java.lang.reflect.Type;
 
 @SideOnly(Side.CLIENT)
 public class FontMetadataSectionSerializer extends BaseMetadataSectionSerializer

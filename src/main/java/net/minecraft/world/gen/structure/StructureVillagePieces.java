@@ -1,9 +1,5 @@
 package net.minecraft.world.gen.structure;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import net.minecraft.block.Block;
@@ -21,7 +17,13 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.BiomeEvent;
-import static net.minecraftforge.common.ChestGenHooks.*;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
+import static net.minecraftforge.common.ChestGenHooks.VILLAGE_BLACKSMITH;
 
 public class StructureVillagePieces
 {

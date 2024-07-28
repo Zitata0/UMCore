@@ -1,5 +1,15 @@
 package net.minecraftforge.client.model.obj;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.resources.IResource;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.IModelCustom;
+import net.minecraftforge.client.model.ModelFormatException;
+import org.lwjgl.opengl.GL11;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,18 +17,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.resources.IResource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.IModelCustom;
-import net.minecraftforge.client.model.ModelFormatException;
-
-import org.lwjgl.opengl.GL11;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  *  Wavefront Object importer

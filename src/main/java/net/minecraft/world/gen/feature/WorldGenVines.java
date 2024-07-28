@@ -1,10 +1,11 @@
 package net.minecraft.world.gen.feature;
 
-import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Facing;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class WorldGenVines extends WorldGenerator
 {

@@ -3,7 +3,6 @@ package net.minecraft.client.renderer.tileentity;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Calendar;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.client.model.ModelChest;
@@ -13,6 +12,8 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import java.util.Calendar;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityChestRenderer extends TileEntitySpecialRenderer

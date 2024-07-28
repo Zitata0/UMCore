@@ -3,11 +3,6 @@ package net.minecraft.client.renderer.texture;
 import com.google.common.collect.Lists;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.Callable;
 import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.client.resources.data.AnimationFrame;
 import net.minecraft.client.resources.data.AnimationMetadataSection;
@@ -16,6 +11,12 @@ import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ReportedException;
 import net.minecraft.util.ResourceLocation;
+
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.Callable;
 
 @SideOnly(Side.CLIENT)
 public class TextureAtlasSprite implements IIcon

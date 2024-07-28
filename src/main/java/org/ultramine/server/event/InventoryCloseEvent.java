@@ -1,7 +1,7 @@
 package org.ultramine.server.event;
 
-import net.minecraft.entity.player.EntityPlayerMP;
 import cpw.mods.fml.common.eventhandler.Event;
+import net.minecraft.entity.player.EntityPlayerMP;
 
 public class InventoryCloseEvent extends Event
 {

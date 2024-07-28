@@ -3,6 +3,7 @@ package net.minecraft.client.audio;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Map;
 
 @SideOnly(Side.CLIENT)

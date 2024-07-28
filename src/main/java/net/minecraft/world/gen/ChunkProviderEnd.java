@@ -1,7 +1,6 @@
 package net.minecraft.world.gen;
 
-import java.util.List;
-import java.util.Random;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
@@ -14,10 +13,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.ChunkProviderEvent;
+import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import net.minecraftforge.event.terraingen.TerrainGen;
 
-import net.minecraftforge.common.*;
-import cpw.mods.fml.common.eventhandler.Event.*;
-import net.minecraftforge.event.terraingen.*;
+import java.util.List;
+import java.util.Random;
 
 public class ChunkProviderEnd implements IChunkProvider
 {

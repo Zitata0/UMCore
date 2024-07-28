@@ -1,9 +1,5 @@
 package org.ultramine.server;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.inventory.InventoryCrafting;
@@ -17,6 +13,9 @@ import org.ultramine.server.util.CollectionUtil;
 import org.ultramine.server.util.ModificationControlList;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RecipeCache
 {

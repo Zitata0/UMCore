@@ -1,15 +1,13 @@
 package org.ultramine.server;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-
-import org.ultramine.server.util.WarpLocation;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
+import org.ultramine.server.util.WarpLocation;
+
+import java.util.LinkedList;
 
 public class Teleporter
 {
@@ -51,13 +49,13 @@ public class Teleporter
 	public static void tpLater(EntityPlayerMP target, WarpLocation dst)
 	{
 		long timeto = target.getData().core().getNextTeleportationTime() - System.currentTimeMillis();
-		if(timeto > 0 && !target.hasPermission("admin.abilities.skipteleportcooldown"))
+		if(timeto > 0)
 		{
 			target.addChatMessage(new ChatComponentTranslation("ultramine.teleporter.fail.cooldownd", timeto/1000).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 			return;
 		}
 		
-		if(!isServer || target.hasPermission("admin.abilities.skipteleportdelay"))
+		if(!isServer)
 		{
 			tpNow(target, dst);
 		}
@@ -99,7 +97,7 @@ public class Teleporter
 		player.getData().core().setLastLocation(lastLocation);
 		if(isServer)
 		{
-			player.getData().core().setNextTeleportationTime(System.currentTimeMillis() + ConfigurationHandler.getServerConfig().settings.teleportation.cooldown*1000);
+			player.getData().core().setNextTeleportationTime(System.currentTimeMillis() + 60*1000);
 			player.getData().core().setTeleporter(null);
 		}
 	}
@@ -117,7 +115,7 @@ public class Teleporter
 	{
 		this.target = target;
 		this.dst = dst;
-		int delay = ConfigurationHandler.getServerConfig().settings.teleportation.delay;
+		int delay = 5;
 		timeEnd = System.currentTimeMillis() + delay*1000;
 		target.addChatMessage(new ChatComponentTranslation("ultramine.teleporter.delay", delay).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.GOLD)));
 		

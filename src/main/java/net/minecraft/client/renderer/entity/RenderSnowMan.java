@@ -12,11 +12,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
 import net.minecraftforge.client.IItemRenderer;
-import static net.minecraftforge.client.IItemRenderer.ItemRenderType.*;
-import static net.minecraftforge.client.IItemRenderer.ItemRendererHelper.*;
 import net.minecraftforge.client.MinecraftForgeClient;
+import org.lwjgl.opengl.GL11;
+
+import static net.minecraftforge.client.IItemRenderer.ItemRenderType.EQUIPPED;
+import static net.minecraftforge.client.IItemRenderer.ItemRendererHelper.BLOCK_3D;
 
 @SideOnly(Side.CLIENT)
 public class RenderSnowMan extends RenderLiving

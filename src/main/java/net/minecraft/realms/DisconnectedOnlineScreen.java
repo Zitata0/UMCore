@@ -2,9 +2,10 @@ package net.minecraft.realms;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.util.IChatComponent;
+
 import java.util.Iterator;
 import java.util.List;
-import net.minecraft.util.IChatComponent;
 
 @SideOnly(Side.CLIENT)
 public class DisconnectedOnlineScreen extends RealmsScreen

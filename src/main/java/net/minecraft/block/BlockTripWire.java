@@ -2,9 +2,6 @@ package net.minecraft.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +12,10 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
 
 public class BlockTripWire extends Block
 {

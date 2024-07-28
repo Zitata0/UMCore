@@ -1,8 +1,8 @@
 package org.ultramine.server.economy;
 
 import com.mojang.authlib.GameProfile;
-import org.ultramine.core.economy.service.Economy;
 import org.ultramine.core.economy.account.PlayerAccount;
+import org.ultramine.core.economy.service.Economy;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.ThreadSafe;

@@ -3,10 +3,6 @@ package net.minecraft.client.shader;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.util.Map;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.client.util.JsonException;
@@ -14,6 +10,11 @@ import net.minecraft.util.ResourceLocation;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.lwjgl.BufferUtils;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class ShaderLoader

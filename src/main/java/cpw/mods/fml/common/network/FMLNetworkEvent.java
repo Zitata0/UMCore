@@ -1,14 +1,15 @@
 package cpw.mods.fml.common.network;
 
-import java.util.Set;
 import com.google.common.collect.ImmutableSet;
+import cpw.mods.fml.common.eventhandler.Event;
+import cpw.mods.fml.common.network.internal.FMLProxyPacket;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.INetHandlerPlayClient;
 import net.minecraft.network.play.INetHandlerPlayServer;
-import cpw.mods.fml.common.eventhandler.Event;
-import cpw.mods.fml.common.network.internal.FMLProxyPacket;
-import cpw.mods.fml.relauncher.Side;
+
+import java.util.Set;
 
 public class FMLNetworkEvent<T extends INetHandler> extends Event {
 	public final T handler;

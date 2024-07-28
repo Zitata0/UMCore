@@ -2,8 +2,6 @@ package net.minecraft.entity.passive;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.UUID;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityOwnable;
 import net.minecraft.entity.ai.EntityAISit;
@@ -11,6 +9,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.server.management.PreYggdrasilConverter;
 import net.minecraft.world.World;
+
+import java.util.UUID;
 
 public abstract class EntityTameable extends EntityAnimal implements IEntityOwnable
 {

@@ -1,7 +1,9 @@
 package cpw.mods.fml.common.eventhandler;
 
-import java.util.*;
 import com.google.common.collect.ImmutableList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ListenerList

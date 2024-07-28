@@ -1,9 +1,9 @@
 package org.ultramine.server.economy;
 
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.holdings.HoldingsFactory;
 import org.ultramine.core.economy.service.DefaultCurrencyService;
 import org.ultramine.core.economy.service.EconomyRegistry;
-import org.ultramine.core.economy.holdings.HoldingsFactory;
 import org.ultramine.core.service.InjectService;
 import org.ultramine.core.service.ServiceManager;
 import org.ultramine.core.util.Undoable;

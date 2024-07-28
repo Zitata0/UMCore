@@ -2,8 +2,9 @@ package net.minecraft.client.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Iterator;
 import net.minecraft.client.resources.I18n;
+
+import java.util.Iterator;
 
 @SideOnly(Side.CLIENT)
 public class GuiYesNo extends GuiScreen

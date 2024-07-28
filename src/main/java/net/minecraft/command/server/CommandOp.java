@@ -1,15 +1,14 @@
 package net.minecraft.command.server;
 
 import com.mojang.authlib.GameProfile;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.server.MinecraftServer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommandOp extends CommandBase
 {

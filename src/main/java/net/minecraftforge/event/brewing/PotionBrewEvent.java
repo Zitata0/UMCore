@@ -1,9 +1,8 @@
 package net.minecraftforge.event.brewing;
 
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import cpw.mods.fml.common.eventhandler.Event;
-import cpw.mods.fml.common.eventhandler.Event.HasResult;
+import net.minecraft.item.ItemStack;
 
 
 public class PotionBrewEvent extends Event

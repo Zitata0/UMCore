@@ -2,6 +2,7 @@ package net.minecraft.entity.ai.attributes;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Collection;
 import java.util.UUID;
 

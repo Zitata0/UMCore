@@ -4,24 +4,9 @@ import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mojang.authlib.GameProfile;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.io.File;
-import java.net.SocketAddress;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.Map.Entry;
-
 import net.minecraft.command.CommandBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
@@ -31,49 +16,27 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S01PacketJoinGame;
-import net.minecraft.network.play.server.S02PacketChat;
-import net.minecraft.network.play.server.S03PacketTimeUpdate;
-import net.minecraft.network.play.server.S05PacketSpawnPosition;
-import net.minecraft.network.play.server.S07PacketRespawn;
-import net.minecraft.network.play.server.S09PacketHeldItemChange;
-import net.minecraft.network.play.server.S1DPacketEntityEffect;
-import net.minecraft.network.play.server.S1FPacketSetExperience;
-import net.minecraft.network.play.server.S2BPacketChangeGameState;
-import net.minecraft.network.play.server.S38PacketPlayerListItem;
-import net.minecraft.network.play.server.S39PacketPlayerAbilities;
-import net.minecraft.network.play.server.S3EPacketTeams;
-import net.minecraft.network.play.server.S3FPacketCustomPayload;
+import net.minecraft.network.play.server.*;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.scoreboard.Score;
-import net.minecraft.scoreboard.ScoreObjective;
-import net.minecraft.scoreboard.ScorePlayerTeam;
-import net.minecraft.scoreboard.Scoreboard;
-import net.minecraft.scoreboard.ServerScoreboard;
-import net.minecraft.scoreboard.Team;
+import net.minecraft.scoreboard.*;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.stats.StatList;
 import net.minecraft.stats.StatisticsFile;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.Teleporter;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldProvider;
-import net.minecraft.world.WorldServer;
-import net.minecraft.world.WorldSettings;
+import net.minecraft.util.*;
+import net.minecraft.world.*;
 import net.minecraft.world.demo.DemoWorldManager;
 import net.minecraft.world.storage.IPlayerFileData;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.ultramine.core.permissions.MinecraftPermissions;
-import org.ultramine.server.ConfigurationHandler;
 import org.ultramine.server.data.ServerDataLoader;
 import org.ultramine.server.internal.UMHooks;
 import org.ultramine.server.util.WarpLocation;
+
+import java.io.File;
+import java.net.SocketAddress;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.Map.Entry;
 
 public abstract class ServerConfigurationManager
 {
@@ -178,8 +141,7 @@ public abstract class ServerConfigurationManager
 		}
 
 		chatcomponenttranslation.getChatStyle().setColor(EnumChatFormatting.YELLOW);
-		if(!p_72355_2_.isHidden() && !p_72355_2_.hasPermission(MinecraftPermissions.HIDE_JOIN_MESSAGE))
-			sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
+		sendPacketToAllPlayers(new S02PacketChat(chatcomponenttranslation, true));
 		this.playerLoggedIn(p_72355_2_);
 		nethandlerplayserver.setPlayerLocation(p_72355_2_.posX, p_72355_2_.posY, p_72355_2_.posZ, p_72355_2_.rotationYaw, p_72355_2_.rotationPitch);
 		this.updateTimeAndWeatherForPlayer(p_72355_2_, worldserver);
@@ -315,39 +277,26 @@ public abstract class ServerConfigurationManager
 		}
 	}
 
-	public void playerLoggedIn(final EntityPlayerMP par1EntityPlayerMP)
+	public void playerLoggedIn(final EntityPlayerMP entityPlayerMP)
 	{
-		if(!par1EntityPlayerMP.isHidden())
-			this.sendPacketToAllPlayers(new S38PacketPlayerListItem(par1EntityPlayerMP.getTabListName(), true, 1000));
-		else
-		{
-			for(Object o : playerEntityList)
-			{
-				EntityPlayerMP p = (EntityPlayerMP)o;
-				if(p.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS))
-					p.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(par1EntityPlayerMP.getTabListName(), true, 1000));
-			}
-		}
-		this.playerEntityList.add(par1EntityPlayerMP);
-		usernameToPlayerMap.put(par1EntityPlayerMP.getGameProfile().getName().toLowerCase(), par1EntityPlayerMP);
-		final WorldServer worldserver = this.mcServer.worldServerForDimension(par1EntityPlayerMP.dimension);
-		
-		
-		int cx = MathHelper.floor_double(par1EntityPlayerMP.posX) >> 4;
-		int cz = MathHelper.floor_double(par1EntityPlayerMP.posZ) >> 4;
-		worldserver.spawnEntityInWorld(par1EntityPlayerMP);
-		func_72375_a(par1EntityPlayerMP, (WorldServer)null);
+		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(entityPlayerMP.getCommandSenderName(), true, 1000));
+		this.playerEntityList.add(entityPlayerMP);
+		usernameToPlayerMap.put(entityPlayerMP.getGameProfile().getName().toLowerCase(), entityPlayerMP);
+		final WorldServer worldserver = this.mcServer.worldServerForDimension(entityPlayerMP.dimension);
 
-		boolean seeInvisible = par1EntityPlayerMP.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS);
+		int cx = MathHelper.floor_double(entityPlayerMP.posX) >> 4;
+		int cz = MathHelper.floor_double(entityPlayerMP.posZ) >> 4;
+		worldserver.spawnEntityInWorld(entityPlayerMP);
+		func_72375_a(entityPlayerMP, (WorldServer)null);
+
 		for (int i = 0; i < this.playerEntityList.size(); ++i)
 		{
 			EntityPlayerMP entityplayermp1 = (EntityPlayerMP)this.playerEntityList.get(i);
-			if(!entityplayermp1.isHidden() || seeInvisible)
-				par1EntityPlayerMP.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp1.getTabListName(), true, entityplayermp1.ping));
+			entityPlayerMP.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp1.getCommandSenderName(), true, entityplayermp1.ping));
 		}
 		
-		if(par1EntityPlayerMP.isHidden())
-			CommandBase.func_152374_a(par1EntityPlayerMP, null, 1, "ultramine.notify.loggedhidden");
+		if(entityPlayerMP.isHidden())
+			CommandBase.func_152374_a(entityPlayerMP, null, 1, "ultramine.notify.loggedhidden");
 	}
 
 	public void updatePlayerPertinentChunks(EntityPlayerMP p_72358_1_)
@@ -373,7 +322,7 @@ public abstract class ServerConfigurationManager
 		this.playerEntityList.remove(p_72367_1_);
 		usernameToPlayerMap.remove(p_72367_1_.getGameProfile().getName().toLowerCase());
 		this.field_148547_k.remove(p_72367_1_.getUniqueID());
-		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(p_72367_1_.getTabListName(), false, 9999));
+		this.sendPacketToAllPlayers(new S38PacketPlayerListItem(p_72367_1_.getCommandSenderName(), false, 9999));
 	}
 
 	public String allowUserToConnect(SocketAddress p_148542_1_, GameProfile p_148542_2_)
@@ -452,18 +401,19 @@ public abstract class ServerConfigurationManager
 		return new EntityPlayerMP(this.mcServer, this.mcServer.worldServerForDimension(0), p_148545_1_, (ItemInWorldManager)object);
 	}
 
+	//TODO Zitata: Исправить спавн игрока, когда удалены варпы
 	public EntityPlayerMP respawnPlayer(EntityPlayerMP p_72368_1_, int p_72368_2_, boolean p_72368_3_)
 	{
 		int oldDim = p_72368_1_.dimension;
 		WorldServer oldWorld = mcServer.getMultiWorld().getWorldByID(oldDim);
-		boolean respawnOnBed = (getServerInstance().isSinglePlayer() || ConfigurationHandler.getServerConfig().settings.spawnLocations.respawnOnBed);
+		boolean respawnOnBed = true;
 		WarpLocation spawn = null;
 		if(oldWorld.getConfig().settings.respawnOnWarp != null)
 			spawn = getDataLoader().getWarp(oldWorld.getConfig().settings.respawnOnWarp);
 		
 		if(spawn == null)
 		{
-			WarpLocation spawnWarp = getDataLoader().getWarp(getServerInstance().isSinglePlayer() ? "spawn" : ConfigurationHandler.getServerConfig().settings.spawnLocations.deathSpawn);
+			WarpLocation spawnWarp = getDataLoader().getWarp("spawn");
 			spawn = (spawnWarp != null ? spawnWarp : getDataLoader().getWarp("spawn"));
 		}
 		
@@ -701,17 +651,7 @@ public abstract class ServerConfigurationManager
 		if (this.playerPingIndex < this.playerEntityList.size())
 		{
 			EntityPlayerMP entityplayermp = (EntityPlayerMP)this.playerEntityList.get(this.playerPingIndex);
-			if(!entityplayermp.isHidden())
-				this.sendPacketToAllPlayers(new S38PacketPlayerListItem(entityplayermp.getTabListName(), true, entityplayermp.ping));
-			else
-			{
-				for(Object o : playerEntityList)
-				{
-					EntityPlayerMP p = (EntityPlayerMP)o;
-					if(p.hasPermission(MinecraftPermissions.SEE_INVISIBLE_PLAYERS))
-						p.playerNetServerHandler.sendPacket(new S38PacketPlayerListItem(entityplayermp.getTabListName(), true, entityplayermp.ping));
-				}
-			}
+			sendPacketToAllPlayers(new S38PacketPlayerListItem(entityplayermp.getCommandSenderName(), true, entityplayermp.ping));
 		}
 	}
 

@@ -2,7 +2,6 @@ package net.minecraft.client.resources;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiListExtended;
@@ -10,6 +9,8 @@ import net.minecraft.client.gui.GuiScreenResourcePacks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
+
+import java.util.List;
 
 @SideOnly(Side.CLIENT)
 public abstract class ResourcePackListEntry implements GuiListExtended.IGuiListEntry

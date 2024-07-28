@@ -1,21 +1,19 @@
 package cpw.mods.fml.common.network.simpleimpl;
 
-import io.netty.channel.ChannelFutureListener;
-
-import java.util.EnumMap;
-
 import com.google.common.base.Throwables;
-
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.network.INetHandler;
-import net.minecraft.network.Packet;
-import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.relauncher.Side;
+import io.netty.channel.ChannelFutureListener;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.network.INetHandler;
+import net.minecraft.network.Packet;
+import net.minecraft.tileentity.TileEntity;
+
+import java.util.EnumMap;
 
 /**
  * This class is a simplified netty wrapper for those not wishing to deal with the full power of netty.

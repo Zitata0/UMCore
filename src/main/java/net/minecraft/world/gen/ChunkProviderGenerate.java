@@ -1,7 +1,6 @@
 package net.minecraft.world.gen;
 
-import java.util.List;
-import java.util.Random;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.EnumCreatureType;
@@ -21,12 +20,16 @@ import net.minecraft.world.gen.structure.MapGenMineshaft;
 import net.minecraft.world.gen.structure.MapGenScatteredFeature;
 import net.minecraft.world.gen.structure.MapGenStronghold;
 import net.minecraft.world.gen.structure.MapGenVillage;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.ChunkProviderEvent;
+import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import net.minecraftforge.event.terraingen.TerrainGen;
+
+import java.util.List;
+import java.util.Random;
 
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.*;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.*;
-import net.minecraftforge.common.*;
-import cpw.mods.fml.common.eventhandler.Event.*;
-import net.minecraftforge.event.terraingen.*;
 
 public class ChunkProviderGenerate implements IChunkProvider
 {

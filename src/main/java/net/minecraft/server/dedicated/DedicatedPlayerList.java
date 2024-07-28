@@ -3,14 +3,12 @@ package net.minecraft.server.dedicated;
 import com.mojang.authlib.GameProfile;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.io.IOException;
-
 import net.minecraft.server.management.ServerConfigurationManager;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ultramine.server.ConfigurationHandler;
+
+import java.io.IOException;
 
 @SideOnly(Side.SERVER)
 public class DedicatedPlayerList extends ServerConfigurationManager

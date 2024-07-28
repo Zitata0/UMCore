@@ -2,13 +2,14 @@ package net.minecraft.network.play.server;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.INetHandlerPlayClient;
 import net.minecraft.world.World;
+
+import java.io.IOException;
 
 public class S23PacketBlockChange extends Packet
 {

@@ -1,17 +1,16 @@
 package org.ultramine.server.service;
 
-import static org.objectweb.asm.Opcodes.*;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Type;
+import org.ultramine.core.service.ServiceDelegate;
+import org.ultramine.server.util.UnsafeUtil;
+import sun.misc.Unsafe;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.MethodVisitor;
-import org.objectweb.asm.Type;
-import org.ultramine.server.util.UnsafeUtil;
-
-import org.ultramine.core.service.ServiceDelegate;
-import sun.misc.Unsafe;
+import static org.objectweb.asm.Opcodes.*;
 
 public class ServiceDelegateGenerator
 {

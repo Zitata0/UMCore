@@ -1,18 +1,9 @@
 package net.minecraftforge.client;
 
-import static net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType.*;
-
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
-
+import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.GuiIngame;
-import net.minecraft.client.gui.GuiPlayerInfo;
-import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.gui.*;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
@@ -29,23 +20,21 @@ import net.minecraft.potion.Potion;
 import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.ScorePlayerTeam;
-import net.minecraft.util.Direction;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.FoodStats;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StringUtils;
+import net.minecraft.util.*;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import cpw.mods.fml.common.FMLCommonHandler;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import static net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType.*;
 
 public class GuiIngameForge extends GuiIngame
 {

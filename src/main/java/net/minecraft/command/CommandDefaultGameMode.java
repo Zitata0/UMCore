@@ -1,10 +1,11 @@
 package net.minecraft.command;
 
-import java.util.Iterator;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.WorldSettings;
+
+import java.util.Iterator;
 
 public class CommandDefaultGameMode extends CommandGameMode
 {

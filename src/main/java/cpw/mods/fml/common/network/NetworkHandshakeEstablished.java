@@ -1,8 +1,8 @@
 package cpw.mods.fml.common.network;
 
-import net.minecraft.network.INetHandler;
 import cpw.mods.fml.common.network.handshake.NetworkDispatcher;
 import cpw.mods.fml.relauncher.Side;
+import net.minecraft.network.INetHandler;
 
 /**
  * This message is sent through all channels affected by a currently occurring handshake. It is guaranteed to

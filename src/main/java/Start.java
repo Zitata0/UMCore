@@ -1,18 +1,10 @@
-import java.io.File;
+import net.minecraft.client.main.Main;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Field;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.Arrays;
-
-import joptsimple.ArgumentAcceptingOptionSpec;
-import joptsimple.OptionParser;
-import joptsimple.OptionSet;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.main.Main;
 
 public class Start
 {

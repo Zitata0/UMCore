@@ -1,8 +1,5 @@
 package net.minecraft.item;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,6 +12,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class ItemShears extends Item
 {

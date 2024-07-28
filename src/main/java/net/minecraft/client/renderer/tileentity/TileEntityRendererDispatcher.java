@@ -2,9 +2,6 @@ package net.minecraft.client.renderer.tileentity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderEnchantmentTable;
@@ -12,19 +9,14 @@ import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityBeacon;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.tileentity.TileEntityEnchantmentTable;
-import net.minecraft.tileentity.TileEntityEndPortal;
-import net.minecraft.tileentity.TileEntityEnderChest;
-import net.minecraft.tileentity.TileEntityMobSpawner;
-import net.minecraft.tileentity.TileEntityPiston;
-import net.minecraft.tileentity.TileEntitySign;
-import net.minecraft.tileentity.TileEntitySkull;
+import net.minecraft.tileentity.*;
 import net.minecraft.util.ReportedException;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityRendererDispatcher

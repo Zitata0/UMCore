@@ -2,9 +2,6 @@ package net.minecraft.world.storage;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import java.util.Map;
-import java.util.concurrent.Callable;
 import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,6 +9,9 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.WorldSettings;
 import net.minecraft.world.WorldType;
+
+import java.util.Map;
+import java.util.concurrent.Callable;
 
 public class WorldInfo
 {

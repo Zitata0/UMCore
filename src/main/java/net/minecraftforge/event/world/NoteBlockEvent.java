@@ -1,13 +1,9 @@
 package net.minecraftforge.event.world;
 
 import com.google.common.base.Preconditions;
-
-import net.minecraft.block.Block;
+import cpw.mods.fml.common.eventhandler.Cancelable;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-import net.minecraftforge.event.world.BlockEvent;
-import cpw.mods.fml.common.eventhandler.Cancelable;
-import cpw.mods.fml.common.eventhandler.Event;
 
 /**
  * Base class for Noteblock Events

@@ -1,6 +1,5 @@
 package net.minecraft.entity.ai;
 
-import java.util.List;
 import net.minecraft.command.IEntitySelector;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
@@ -9,6 +8,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.pathfinding.PathNavigate;
 import net.minecraft.util.Vec3;
+
+import java.util.List;
 
 public class EntityAIAvoidEntity extends EntityAIBase
 {

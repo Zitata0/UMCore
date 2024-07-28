@@ -2,8 +2,9 @@ package net.minecraft.realms;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Random;
 import net.minecraft.util.MathHelper;
+
+import java.util.Random;
 
 @SideOnly(Side.CLIENT)
 public class RealmsMth

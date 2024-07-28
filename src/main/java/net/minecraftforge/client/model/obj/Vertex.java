@@ -1,8 +1,5 @@
 package net.minecraftforge.client.model.obj;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 public class Vertex
 {
 	public float x, y, z;

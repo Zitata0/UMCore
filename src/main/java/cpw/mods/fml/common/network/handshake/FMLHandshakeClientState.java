@@ -1,9 +1,5 @@
 package cpw.mods.fml.common.network.handshake;
 
-import java.util.List;
-
-import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandlerContext;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -12,6 +8,10 @@ import cpw.mods.fml.common.network.internal.FMLMessage;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.relauncher.Side;
+import io.netty.channel.ChannelFutureListener;
+import io.netty.channel.ChannelHandlerContext;
+
+import java.util.List;
 
 /**
  * Packet handshake sequence manager- client side (responding to remote server)

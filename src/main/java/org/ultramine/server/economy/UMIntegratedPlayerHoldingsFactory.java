@@ -1,12 +1,12 @@
 package org.ultramine.server.economy;
 
 import net.minecraft.server.MinecraftServer;
-import org.ultramine.core.economy.account.Account;
-import org.ultramine.core.economy.exception.AccountTypeNotSupportedException;
 import org.ultramine.core.economy.Currency;
+import org.ultramine.core.economy.account.Account;
+import org.ultramine.core.economy.account.PlayerAccount;
+import org.ultramine.core.economy.exception.AccountTypeNotSupportedException;
 import org.ultramine.core.economy.holdings.Holdings;
 import org.ultramine.core.economy.holdings.HoldingsFactory;
-import org.ultramine.core.economy.account.PlayerAccount;
 import org.ultramine.core.economy.service.EconomyRegistry;
 import org.ultramine.core.service.InjectService;
 import org.ultramine.server.data.player.PlayerData;

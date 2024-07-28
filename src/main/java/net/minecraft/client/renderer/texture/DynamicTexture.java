@@ -2,9 +2,10 @@ package net.minecraft.client.renderer.texture;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.resources.IResourceManager;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import net.minecraft.client.resources.IResourceManager;
 
 @SideOnly(Side.CLIENT)
 public class DynamicTexture extends AbstractTexture

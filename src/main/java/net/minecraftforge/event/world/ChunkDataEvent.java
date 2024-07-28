@@ -1,7 +1,7 @@
 package net.minecraftforge.event.world;
 
-import net.minecraft.world.chunk.Chunk;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.chunk.Chunk;
 
 /**
  * ChunkDataEvent is fired when an event involving chunk data occurs.<br>

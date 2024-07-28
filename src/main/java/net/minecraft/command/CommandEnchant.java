@@ -1,11 +1,12 @@
 package net.minecraft.command;
 
-import java.util.List;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
+
+import java.util.List;
 
 public class CommandEnchant extends CommandBase
 {

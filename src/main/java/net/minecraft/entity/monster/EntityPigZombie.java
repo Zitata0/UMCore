@@ -1,7 +1,5 @@
 package net.minecraft.entity.monster;
 
-import java.util.List;
-import java.util.UUID;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,6 +12,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
+
+import java.util.List;
+import java.util.UUID;
 
 public class EntityPigZombie extends EntityZombie
 {

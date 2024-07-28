@@ -2,43 +2,19 @@ package net.minecraft.entity.player;
 
 import com.google.common.collect.Sets;
 import com.mojang.authlib.GameProfile;
-
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import io.netty.buffer.Unpooled;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IMerchant;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityMinecartHopper;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ContainerBeacon;
-import net.minecraft.inventory.ContainerBrewingStand;
-import net.minecraft.inventory.ContainerChest;
-import net.minecraft.inventory.ContainerDispenser;
-import net.minecraft.inventory.ContainerEnchantment;
-import net.minecraft.inventory.ContainerFurnace;
-import net.minecraft.inventory.ContainerHopper;
-import net.minecraft.inventory.ContainerHorseInventory;
-import net.minecraft.inventory.ContainerMerchant;
-import net.minecraft.inventory.ContainerRepair;
-import net.minecraft.inventory.ContainerWorkbench;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryMerchant;
-import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.inventory.*;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemMapBase;
 import net.minecraft.item.ItemStack;
@@ -47,57 +23,27 @@ import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.client.C15PacketClientSettings;
-import net.minecraft.network.play.server.S02PacketChat;
-import net.minecraft.network.play.server.S06PacketUpdateHealth;
-import net.minecraft.network.play.server.S0APacketUseBed;
-import net.minecraft.network.play.server.S0BPacketAnimation;
-import net.minecraft.network.play.server.S13PacketDestroyEntities;
-import net.minecraft.network.play.server.S19PacketEntityStatus;
-import net.minecraft.network.play.server.S1BPacketEntityAttach;
-import net.minecraft.network.play.server.S1DPacketEntityEffect;
-import net.minecraft.network.play.server.S1EPacketRemoveEntityEffect;
-import net.minecraft.network.play.server.S1FPacketSetExperience;
-import net.minecraft.network.play.server.S2BPacketChangeGameState;
-import net.minecraft.network.play.server.S2DPacketOpenWindow;
-import net.minecraft.network.play.server.S2EPacketCloseWindow;
-import net.minecraft.network.play.server.S2FPacketSetSlot;
-import net.minecraft.network.play.server.S30PacketWindowItems;
-import net.minecraft.network.play.server.S31PacketWindowProperty;
-import net.minecraft.network.play.server.S36PacketSignEditorOpen;
-import net.minecraft.network.play.server.S38PacketPlayerListItem;
-import net.minecraft.network.play.server.S39PacketPlayerAbilities;
-import net.minecraft.network.play.server.S3FPacketCustomPayload;
+import net.minecraft.network.play.server.*;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.scoreboard.IScoreObjectiveCriteria;
 import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.ItemInWorldManager;
+import net.minecraft.server.management.UserListOpsEntry;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.stats.StatBase;
 import net.minecraft.stats.StatList;
 import net.minecraft.stats.StatisticsFile;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityBeacon;
-import net.minecraft.tileentity.TileEntityBrewingStand;
-import net.minecraft.tileentity.TileEntityDispenser;
-import net.minecraft.tileentity.TileEntityDropper;
-import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.tileentity.TileEntityHopper;
-import net.minecraft.tileentity.TileEntitySign;
-import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntityDamageSource;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
-import net.minecraft.util.JsonSerializableSet;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.ReportedException;
+import net.minecraft.tileentity.*;
+import net.minecraft.util.*;
 import net.minecraft.village.MerchantRecipeList;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.WorldSettings;
 import net.minecraft.world.biome.BiomeGenBase;
-
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import org.apache.commons.io.Charsets;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -105,18 +51,14 @@ import org.ultramine.core.economy.account.Account;
 import org.ultramine.core.economy.service.Economy;
 import org.ultramine.core.service.InjectService;
 import org.ultramine.server.WorldConstants;
-import org.ultramine.server.event.PlayerDeathEvent;
-import org.ultramine.server.internal.UMHooks;
 import org.ultramine.server.chunk.ChunkSendManager;
 import org.ultramine.server.data.player.PlayerData;
+import org.ultramine.server.event.PlayerDeathEvent;
 import org.ultramine.server.internal.UMEventFactory;
-import org.ultramine.server.util.BasicTypeParser;
+import org.ultramine.server.internal.UMHooks;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerDropsEvent;
-import org.ultramine.core.permissions.Permissions;
+import java.io.IOException;
+import java.util.*;
 
 public class EntityPlayerMP extends EntityPlayer implements ICrafting
 {
@@ -912,9 +854,28 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 		this.playerNetServerHandler.sendPacket(new S02PacketChat(UMHooks.onChatSend(this, p_145747_1_)));
 	}
 
-	public boolean canCommandSenderUseCommand(int p_70003_1_, String p_70003_2_)
+	public boolean canCommandSenderUseCommand(int i, String str)
 	{
-		return true;
+		if ("seed".equals(str) && !this.mcServer.isDedicatedServer())
+		{
+			return true;
+		}
+		else if (!"tell".equals(str) && !"help".equals(str) && !"me".equals(str))
+		{
+			if (this.mcServer.getConfigurationManager().func_152596_g(this.getGameProfile()))
+			{
+				UserListOpsEntry userlistopsentry = (UserListOpsEntry)this.mcServer.getConfigurationManager().func_152603_m().func_152683_b(this.getGameProfile());
+				return userlistopsentry != null ? userlistopsentry.func_152644_a() >= i : this.mcServer.getOpPermissionLevel() >= i;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
 	}
 
 	public String getPlayerIP()
@@ -1001,18 +962,7 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	private int renderDistance;
 	private final ChunkSendManager chunkMgr = new ChunkSendManager(this);
 	private PlayerData playerData;
-	@InjectService private static Permissions perms;
 	@InjectService private static Economy economy;
-
-	public boolean hasPermission(String permission)
-	{
-		return perms.has(this, permission);
-	}
-
-	public String getMeta(String key)
-	{
-		return perms.getMeta(this, key);
-	}
 
 	public Account getAccount()
 	{
@@ -1049,14 +999,6 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	{
 		playerData.setProfile(getGameProfile());
 		this.playerData = playerData;
-	}
-	
-	public String getTabListName()
-	{
-		String meta = getMeta("tablistcolor");
-		EnumChatFormatting color = meta.isEmpty() ? null : BasicTypeParser.parseColor(meta);
-		String name = color == null ? getCommandSenderName() : color.toString() + getCommandSenderName();
-		return name.length() > 16 ? name.substring(0, 16) : name;
 	}
 
 	public String translate(String key)
@@ -1135,26 +1077,6 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
 	public void setStatisticsFile(StatisticsFile stats)
 	{
 		this.field_147103_bO = stats;
-	}
-	
-	public void hide()
-	{
-		if(!isHidden())
-		{
-			getData().core().setHidden(true);
-			((WorldServer)worldObj).getEntityTracker().hidePlayer(this);
-			mcServer.getConfigurationManager().sendPacketToAllPlayers(new S38PacketPlayerListItem(getTabListName(), false, 9999));
-		}
-	}
-	
-	public void show()
-	{
-		if(isHidden())
-		{
-			getData().core().setHidden(false);
-			((WorldServer)worldObj).getEntityTracker().showPlayer(this);
-			mcServer.getConfigurationManager().sendPacketToAllPlayers(new S38PacketPlayerListItem(getTabListName(), true, ping));
-		}
 	}
 	
 	public boolean isHidden()

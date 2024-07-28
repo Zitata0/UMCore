@@ -2,13 +2,14 @@ package net.minecraft.client.shader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
-import javax.vecmath.Matrix4f;
 import net.minecraft.client.renderer.OpenGlHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.BufferUtils;
+
+import javax.vecmath.Matrix4f;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 
 @SideOnly(Side.CLIENT)
 public class ShaderUniform

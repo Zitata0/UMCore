@@ -3,14 +3,15 @@ package net.minecraft.client.shader;
 import com.google.common.collect.Lists;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Iterator;
-import java.util.List;
-import javax.vecmath.Matrix4f;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.client.util.JsonException;
 import org.lwjgl.opengl.GL11;
+
+import javax.vecmath.Matrix4f;
+import java.util.Iterator;
+import java.util.List;
 
 @SideOnly(Side.CLIENT)
 public class Shader

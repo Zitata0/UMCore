@@ -2,14 +2,14 @@ package org.ultramine.server.economy;
 
 import com.mojang.authlib.GameProfile;
 import org.ultramine.core.economy.Currency;
-import org.ultramine.core.economy.service.DefaultCurrencyService;
-import org.ultramine.core.economy.service.DefaultHoldingsProvider;
-import org.ultramine.core.economy.service.EconomyRegistry;
-import org.ultramine.core.economy.holdings.Holdings;
-import org.ultramine.core.economy.holdings.HoldingsFactory;
 import org.ultramine.core.economy.account.PlayerAccount;
 import org.ultramine.core.economy.exception.CurrencyNotFoundException;
 import org.ultramine.core.economy.exception.CurrencyNotSupportedException;
+import org.ultramine.core.economy.holdings.Holdings;
+import org.ultramine.core.economy.holdings.HoldingsFactory;
+import org.ultramine.core.economy.service.DefaultCurrencyService;
+import org.ultramine.core.economy.service.DefaultHoldingsProvider;
+import org.ultramine.core.economy.service.EconomyRegistry;
 import org.ultramine.core.service.InjectService;
 
 import javax.annotation.Nonnull;

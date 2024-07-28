@@ -2,8 +2,6 @@ package net.minecraft.client.renderer;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.EntityLivingBase;
@@ -14,6 +12,9 @@ import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.GLU;
+
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 
 @SideOnly(Side.CLIENT)
 public class ActiveRenderInfo

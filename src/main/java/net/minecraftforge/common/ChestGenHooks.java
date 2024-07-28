@@ -1,7 +1,5 @@
 package net.minecraftforge.common;
 
-import java.util.*;
-
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,14 +7,19 @@ import net.minecraft.util.WeightedRandom;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.gen.feature.WorldGenDungeons;
-import net.minecraft.world.gen.structure.*;
 import net.minecraft.world.gen.structure.ComponentScatteredFeaturePieces.DesertPyramid;
 import net.minecraft.world.gen.structure.ComponentScatteredFeaturePieces.JunglePyramid;
+import net.minecraft.world.gen.structure.StructureMineshaftPieces;
 import net.minecraft.world.gen.structure.StructureStrongholdPieces.ChestCorridor;
 import net.minecraft.world.gen.structure.StructureStrongholdPieces.Library;
 import net.minecraft.world.gen.structure.StructureStrongholdPieces.RoomCrossing;
 import net.minecraft.world.gen.structure.StructureVillagePieces.House2;
 import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Random;
 
 public class ChestGenHooks
 {

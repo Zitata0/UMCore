@@ -2,7 +2,6 @@ package net.minecraft.client.renderer.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Random;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -14,6 +13,8 @@ import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import java.util.Random;
 
 @SideOnly(Side.CLIENT)
 public class RenderEnderman extends RenderLiving

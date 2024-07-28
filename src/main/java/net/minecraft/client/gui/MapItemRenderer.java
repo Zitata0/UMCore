@@ -3,8 +3,6 @@ package net.minecraft.client.gui;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import java.util.Iterator;
-import java.util.Map;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
@@ -13,6 +11,9 @@ import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.MapData;
 import org.lwjgl.opengl.GL11;
+
+import java.util.Iterator;
+import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class MapItemRenderer

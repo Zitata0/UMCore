@@ -1,31 +1,11 @@
 package org.ultramine.server.data;
 
-import gnu.trove.set.TIntSet;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.function.Consumer;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.ultramine.commands.basic.FastWarpCommand;
-import org.ultramine.server.ConfigurationHandler;
-import org.ultramine.server.data.player.PlayerData;
-import org.ultramine.server.data.player.PlayerDataExtension;
-import org.ultramine.server.data.player.PlayerDataExtensionInfo;
-import org.ultramine.server.util.TwoStepsExecutor;
-import org.ultramine.server.util.WarpLocation;
-
 import com.mojang.authlib.GameProfile;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.FMLNetworkEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.command.CommandHandler;
+import gnu.trove.set.TIntSet;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetHandlerPlayServer;
@@ -37,6 +17,16 @@ import net.minecraft.world.storage.SaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.ForgeEventFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.ultramine.server.data.player.PlayerData;
+import org.ultramine.server.data.player.PlayerDataExtension;
+import org.ultramine.server.data.player.PlayerDataExtensionInfo;
+import org.ultramine.server.util.TwoStepsExecutor;
+import org.ultramine.server.util.WarpLocation;
+
+import java.util.*;
+import java.util.function.Consumer;
 
 public class ServerDataLoader
 {
@@ -54,7 +44,7 @@ public class ServerDataLoader
 	public ServerDataLoader(ServerConfigurationManager mgr)
 	{
 		this.mgr = mgr;
-		dataProvider = isClient || !ConfigurationHandler.getServerConfig().settings.inSQLServerStorage.enabled ? new NBTFileDataProvider(mgr) : new JDBCDataProvider(mgr);
+		dataProvider = new NBTFileDataProvider(mgr);
 	}
 	
 	public IDataProvider getDataProvider()
@@ -101,26 +91,6 @@ public class ServerDataLoader
 	public Map<String, WarpLocation> getWarps()
 	{
 		return warps;
-	}
-	
-	public void addFastWarp(String name)
-	{
-		if(fastWarps.add(name))
-		{
-			dataProvider.saveFastWarp(name);
-			((CommandHandler)mgr.getServerInstance().getCommandManager()).getRegistry().registerCommand(new FastWarpCommand(name));
-		}
-	}
-	
-	public boolean removeFastWarp(String name)
-	{
-		if(fastWarps.remove(name))
-		{
-			dataProvider.removeFastWarp(name);
-			((CommandHandler)mgr.getServerInstance().getCommandManager()).getRegistry().getCommandMap().remove(name);
-			return true;
-		}
-		return false;
 	}
 	
 	public List<String> getFastWarps()
@@ -175,8 +145,8 @@ public class ServerDataLoader
 		}
 		if(!isClient)
 		{
-			String firstSpawn = ConfigurationHandler.getServerConfig().settings.spawnLocations.firstSpawn;
-			String deathSpawn = ConfigurationHandler.getServerConfig().settings.spawnLocations.deathSpawn;
+			String firstSpawn = "spawn";
+			String deathSpawn = "spawn";
 			if(!warps.containsKey(firstSpawn)) setWarp(firstSpawn, getWarp("spawn"));
 			if(!warps.containsKey(deathSpawn)) setWarp(deathSpawn, getWarp("spawn"));
 		}
@@ -241,7 +211,7 @@ public class ServerDataLoader
 		WarpLocation spawn = null;
 		if(nbt == null) //first login
 		{
-			WarpLocation spawnWarp = getWarp(isClient ? "spawn" : ConfigurationHandler.getServerConfig().settings.spawnLocations.firstSpawn);
+			WarpLocation spawnWarp = getWarp("spawn");
 			spawn = (spawnWarp != null ? spawnWarp : getWarp("spawn"));
 		}
 		else
