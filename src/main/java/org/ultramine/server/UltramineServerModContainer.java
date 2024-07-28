@@ -232,7 +232,7 @@ public class UltramineServerModContainer extends DummyModContainer
 	@Override
 	public File getSource()
 	{
-		return UltraminePlugin.location;
+		return UltraminePluginNew.location;
 	}
 
 	@Override

@@ -9,7 +9,7 @@ import java.util.Map;
 import net.minecraft.launchwrapper.LaunchClassLoader;
 
 @SortingIndex(Integer.MAX_VALUE) //UMTransformerCollection must be always the last
-public class UltraminePlugin implements IFMLLoadingPlugin
+public class UltraminePluginNew implements IFMLLoadingPlugin
 {
 	public static File location;
 	public static boolean isObfEnv;
