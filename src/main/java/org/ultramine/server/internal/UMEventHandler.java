@@ -43,57 +43,6 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class UMEventHandler
 {
-	@SideOnly(Side.SERVER)
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	public void checkChatPermission(ServerChatEvent e)
-	{
-		if(e.player.playerNetServerHandler == null || e.player.getData() == null)
-			return;
-		PlayerCoreData data = e.player.getData().core();
-		if(data.isMuted())
-		{
-			e.setCanceled(true);
-			if(data.getUnmuteTime() != Long.MAX_VALUE)
-			{
-				e.player.addChatMessage(new ChatComponentTranslation("ultramine.ability.chat.muted",
-						BasicTypeFormatter.formatTime(data.getUnmuteTime() - System.currentTimeMillis(), true))
-						.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-			}
-			else
-			{
-				e.player.addChatMessage(new ChatComponentTranslation("ultramine.ability.chat.muted.forever").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-			}
-		}
-		else if(e.player.isHidden())
-		{
-			e.setCanceled(true);
-			e.player.addChatMessage(new ChatComponentTranslation("ultramine.hidden.chat").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-		}
-	}
-	
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	public void onServerCommand(CommandEvent e)
-	{
-		if(e.sender instanceof EntityPlayerMP)
-		{
-			EntityPlayerMP player = (EntityPlayerMP)e.sender;
-			if(player.playerNetServerHandler != null && player.getData() != null && player.getData().core().isCommandsMuted())
-			{
-				e.setCanceled(true);
-				if(player.getData().core().getUnmuteTime() != Long.MAX_VALUE)
-				{
-					player.addChatMessage(new ChatComponentTranslation("ultramine.ability.command.muted",
-							BasicTypeFormatter.formatTime(player.getData().core().getUnmuteTime() - System.currentTimeMillis(), true))
-							.setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-				}
-				else
-				{
-					player.addChatMessage(new ChatComponentTranslation("ultramine.ability.command.muted.forever").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-				}
-			}
-		}
-	}
-	
 	@SubscribeEvent
 	public void onServerTickCommon(TickEvent.ServerTickEvent e)
 	{

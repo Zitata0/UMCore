@@ -52,7 +52,7 @@ public class ServerDataLoader
 	public ServerDataLoader(ServerConfigurationManager mgr)
 	{
 		this.mgr = mgr;
-		dataProvider = isClient || !ConfigurationHandler.getServerConfig().settings.inSQLServerStorage.enabled ? new NBTFileDataProvider(mgr) : new JDBCDataProvider(mgr);
+		dataProvider = new NBTFileDataProvider(mgr);
 	}
 	
 	public IDataProvider getDataProvider()
@@ -153,8 +153,8 @@ public class ServerDataLoader
 		}
 		if(!isClient)
 		{
-			String firstSpawn = ConfigurationHandler.getServerConfig().settings.spawnLocations.firstSpawn;
-			String deathSpawn = ConfigurationHandler.getServerConfig().settings.spawnLocations.deathSpawn;
+			String firstSpawn = "spawn";
+			String deathSpawn = "spawn";
 			if(!warps.containsKey(firstSpawn)) setWarp(firstSpawn, getWarp("spawn"));
 			if(!warps.containsKey(deathSpawn)) setWarp(deathSpawn, getWarp("spawn"));
 		}
@@ -219,7 +219,7 @@ public class ServerDataLoader
 		WarpLocation spawn = null;
 		if(nbt == null) //first login
 		{
-			WarpLocation spawnWarp = getWarp(isClient ? "spawn" : ConfigurationHandler.getServerConfig().settings.spawnLocations.firstSpawn);
+			WarpLocation spawnWarp = getWarp("spawn");
 			spawn = (spawnWarp != null ? spawnWarp : getWarp("spawn"));
 		}
 		else

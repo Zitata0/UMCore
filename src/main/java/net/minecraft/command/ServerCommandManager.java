@@ -134,5 +134,4 @@ public class ServerCommandManager extends CommandHandler implements IAdminComman
 			p_152372_1_.addChatMessage(new ChatComponentTranslation(p_152372_4_, p_152372_5_));
 		}
 	}
-
 }

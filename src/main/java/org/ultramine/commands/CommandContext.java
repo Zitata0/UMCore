@@ -39,7 +39,6 @@ import java.util.concurrent.CompletionException;
 
 public class CommandContext
 {
-	@InjectService private static Economy economy;
 	private static final Logger log = LogManager.getLogger();
 	private ICommandSender sender;
 	private String[] args;
@@ -149,36 +148,6 @@ public class CommandContext
 	public ServerDataLoader getServerData()
 	{
 		return getServer().getConfigurationManager().getDataLoader();
-	}
-
-	/* thread-safe */
-	public void handleException(@Nullable Throwable throwable)
-	{
-		if(throwable == null)
-			return;
-		if(throwable instanceof CompletionException && throwable.getCause() != null)
-			throwable = throwable.getCause();
-		if(throwable instanceof WrongUsageException)
-		{
-			CommandException cmdEx = (CommandException) throwable;
-			ChatComponentTranslation msg = new ChatComponentTranslation("commands.generic.usage", new ChatComponentTranslation(cmdEx.getMessage(), cmdEx.getErrorOjbects()));
-			msg.getChatStyle().setColor(EnumChatFormatting.RED);
-			sendMessage(msg);
-		}
-		else if(throwable instanceof CommandException)
-		{
-			CommandException cmdEx = (CommandException) throwable;
-			ChatComponentTranslation msg = new ChatComponentTranslation(cmdEx.getMessage(), cmdEx.getErrorOjbects());
-			msg.getChatStyle().setColor(EnumChatFormatting.RED);
-			sendMessage(msg);
-		}
-		else
-		{
-			ChatComponentTranslation msg = new ChatComponentTranslation("commands.generic.exception");
-			msg.getChatStyle().setColor(EnumChatFormatting.RED);
-			sendMessage(msg);
-			log.error("Couldn\'t process command", throwable);
-		}
 	}
 
 	public class Argument

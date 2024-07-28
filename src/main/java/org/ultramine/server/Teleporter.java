@@ -99,7 +99,7 @@ public class Teleporter
 		player.getData().core().setLastLocation(lastLocation);
 		if(isServer)
 		{
-			player.getData().core().setNextTeleportationTime(System.currentTimeMillis() + ConfigurationHandler.getServerConfig().settings.teleportation.cooldown*1000);
+			player.getData().core().setNextTeleportationTime(System.currentTimeMillis() + 60*1000);
 			player.getData().core().setTeleporter(null);
 		}
 	}
@@ -117,7 +117,7 @@ public class Teleporter
 	{
 		this.target = target;
 		this.dst = dst;
-		int delay = ConfigurationHandler.getServerConfig().settings.teleportation.delay;
+		int delay = 5;
 		timeEnd = System.currentTimeMillis() + delay*1000;
 		target.addChatMessage(new ChatComponentTranslation("ultramine.teleporter.delay", delay).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.GOLD)));
 		

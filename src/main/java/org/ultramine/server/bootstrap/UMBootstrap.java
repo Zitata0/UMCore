@@ -109,7 +109,7 @@ public class UMBootstrap
 		String reset_ansi = "\u001b\u005b\u006d";
 		System.out.println(
 				(isColoredTerminal() ? isAnsiColors() ? yellow_ansi : "\u00A7e" : "") +
-				"================[ Starting UltraMine server ]================" +
+				"Starting UM server..." +
 				(isAnsiColors() ? reset_ansi : "")
 		);
 	}

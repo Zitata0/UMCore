@@ -14,7 +14,6 @@ import org.ultramine.server.chunk.ChunkGenerationQueue;
 import org.ultramine.server.chunk.ChunkProfiler;
 import org.ultramine.server.chunk.alloc.ChunkAllocService;
 import org.ultramine.server.chunk.alloc.unsafe.UnsafeChunkAlloc;
-import org.ultramine.server.data.Databases;
 import org.ultramine.server.data.ServerDataLoader;
 import org.ultramine.server.data.player.PlayerCoreData;
 import org.ultramine.server.event.ForgeModIdMappingEvent;
@@ -58,8 +57,8 @@ public class UltramineServerModContainer extends DummyModContainer
 		super(new ModMetadata());
 		instance = this;
 	    ModMetadata meta = getMetadata();
-		meta.modId		= "UltramineServer";
-		meta.name		= "Ultramine Server";
+		meta.modId		= "UMServer";
+		meta.name		= "UMServer";
 		meta.version	= "@version@";
 	}
 
@@ -92,7 +91,6 @@ public class UltramineServerModContainer extends DummyModContainer
 			if(e.getSide().isServer())
 			{
 				ConfigurationHandler.load();
-				Databases.init();
 				MinecraftServer.getServer().getMultiWorld().preloadConfigs();
 				ConfigurationHandler.postWorldDescsLoad();
 			}

@@ -437,18 +437,19 @@ public abstract class ServerConfigurationManager
 		return new EntityPlayerMP(this.mcServer, this.mcServer.worldServerForDimension(0), p_148545_1_, (ItemInWorldManager)object);
 	}
 
+	//TODO Zitata: Исправить спавн игрока, когда удалены варпы
 	public EntityPlayerMP respawnPlayer(EntityPlayerMP p_72368_1_, int p_72368_2_, boolean p_72368_3_)
 	{
 		int oldDim = p_72368_1_.dimension;
 		WorldServer oldWorld = mcServer.getMultiWorld().getWorldByID(oldDim);
-		boolean respawnOnBed = (getServerInstance().isSinglePlayer() || ConfigurationHandler.getServerConfig().settings.spawnLocations.respawnOnBed);
+		boolean respawnOnBed = true;
 		WarpLocation spawn = null;
 		if(oldWorld.getConfig().settings.respawnOnWarp != null)
 			spawn = getDataLoader().getWarp(oldWorld.getConfig().settings.respawnOnWarp);
 		
 		if(spawn == null)
 		{
-			WarpLocation spawnWarp = getDataLoader().getWarp(getServerInstance().isSinglePlayer() ? "spawn" : ConfigurationHandler.getServerConfig().settings.spawnLocations.deathSpawn);
+			WarpLocation spawnWarp = getDataLoader().getWarp("spawn");
 			spawn = (spawnWarp != null ? spawnWarp : getDataLoader().getWarp("spawn"));
 		}
 		
